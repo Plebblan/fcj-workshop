@@ -36,11 +36,11 @@
     </section>
     {{end}} 
     
-    {{ if or (gt (len hugo.Sites) 1) $showvisitedlinks }}
+    {{ if or (gt (len $.Sites) 1) $showvisitedlinks }}
     <section id="prefooter">
       <hr />
       <ul>
-        {{ if and (gt (len hugo.Sites) 1) (not .Site.Params.DisableLanguageSwitchingButton)}}
+        {{ if and (gt (len $.Sites) 1) (not .Site.Params.DisableLanguageSwitchingButton)}}
         <li>
           <a class="padding">
             <i class="fas fa-language fa-fw"></i>
@@ -102,19 +102,17 @@
   </div>
 </nav>
 
-{{ define "section-tree-nav" }} 
-{{ $showvisitedlinks := .showvisitedlinks }}
-{{ $currentNode := .currentnode }}
-{{ $currentPath := $currentNode.RelPermalink }}
-{{ with .sect }}
-{{if and .IsSection (or (not .Params.hidden) $.showhidden)}} {{safeHTML
+{{ define "section-tree-nav" }} {{ $showvisitedlinks := .showvisitedlinks }} {{
+$currentNode := .currentnode }} {{ $currentFileUniqueID := "" }} {{ with
+$currentNode.File }}{{ $currentFileUniqueID = .UniqueID }}{{ end }} {{with
+.sect}} {{if and .IsSection (or (not .Params.hidden) $.showhidden)}} {{safeHTML
 .Params.head}}
 <li
   data-nav-id="{{.RelPermalink}}"
   title="{{.Title}}"
   class="dd-item 
         {{if .IsAncestor $currentNode }}parent{{end}}
-        {{if eq .RelPermalink $currentPath}}active{{end}}
+        {{if eq .File.UniqueID $currentFileUniqueID}}active{{end}}
         {{if .Params.alwaysopen}}parent{{end}}
         "
 >
@@ -144,7 +142,7 @@
 <li
   data-nav-id="{{.RelPermalink}}"
   title="{{.Title}}"
-  class="dd-item {{if eq .RelPermalink $currentPath}}active{{end}}"
+  class="dd-item {{if eq .File.UniqueID $currentFileUniqueID}}active{{end}}"
 >
   <a href="{{ .RelPermalink}}">
     {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML
