@@ -7,7 +7,7 @@ pre: " <b> 1.1. </b> "
 ---
 
 
-### Week 1 Objectives:
+### Week 2 Objectives:
 
 * Connect and get acquainted with members of First Cloud AI Journey.
 * Understand basic AWS services, how to use the console & CLI.

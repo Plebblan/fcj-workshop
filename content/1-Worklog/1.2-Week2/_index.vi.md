@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.2. </b> "
 ---
 
-### Mục tiêu tuần 1:
+### Mục tiêu tuần 2:
 
 * Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
 * Tìm hiểu một số dịch vụ cơ bản trên AWS, học các Module mà chương trình cung cấp 

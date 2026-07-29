@@ -1,43 +1,46 @@
 ---
-title: "Week 1 Worklog"
-date: 2026-06-14
-weight: 1
+title: "Week 7 Worklog"
+date: 2026-07-20
+weight: 7
 chapter: false
-pre: " <b> 1.1. </b> "
+pre: " <b> 1.7. </b> "
 ---
 
-### Week 1 Objectives:
+### Week 7 Objectives:
 
-* Explore AWS services required for the summer project.
-* Understand how each AWS service contributes to the overall cloud architecture.
+* Prepare project documentation for the completed web application.
+* Summarize the project architecture, implementation, and deployment process.
+* Organize technical materials to support project presentation and future maintenance.
 
 ### Tasks to be carried out this week:
 
-| Day | Task | Start Date | Completion Date | Reference Material |
-| -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ----------------------------------------- |
-| 2 | - Review the proposed project architecture <br> - Identify AWS services used in the system | 06/08/2026 | 06/08/2026 | AWS Documentation |
-| 3 | - Learn about Amazon S3 for static website hosting <br> - Research Amazon CloudFront for content delivery | 06/09/2026 | 06/09/2026 | AWS Documentation |
-| 4 | - Learn AWS Lambda and Amazon API Gateway <br> - Understand request flow between frontend and backend | 06/10/2026 | 06/10/2026 | AWS Documentation |
-| 5 | - Research Amazon DynamoDB for application data storage <br> - Learn AWS IAM for permission and security management | 06/11/2026 | 06/11/2026 | AWS Documentation |
-| 6 | - Explore AWS Elemental MediaConvert for video transcoding <br> - Summarize AWS services and their interactions within the project architecture | 06/12/2026 | 06/12/2026 | AWS Documentation |
+| Day | Date | Task | Reference Material |
+| --- | ---- | ---- | ------------------ |
+| 2 | 07/20/2026 | Review the completed project and identify the documents required for project submission.<br>Assign documentation tasks among team members. | Project Repository |
+| 3 | 07/21/2026 | Write the project overview, objectives, and system architecture documentation.<br>Create architecture diagrams illustrating AWS service interactions. | AWS Documentation, draw.io |
+| 4 | 07/22/2026 | Document the frontend and backend implementation.<br>Describe the responsibilities of each AWS service used in the project. | Project Source Code |
+| 5 | 07/23/2026 | Write deployment and configuration guides.<br>Document the steps for deploying the application using Amazon S3, CloudFront, API Gateway, and AWS Lambda. | AWS Documentation |
+| 6 | 07/24/2026 | Review and revise all documentation.<br>Prepare screenshots, diagrams, and supporting materials for the final report and presentation. | Project Repository |
 
-### Week 1 Achievements:
+### Week 7 Achievements:
 
-* Identified the AWS services required to implement the project infrastructure.
+* Completed the first draft of the project's technical documentation.
 
-* Understood the purpose of each service in the architecture:
-  * Amazon S3 for frontend hosting and file storage.
-  * Amazon CloudFront for faster content delivery.
-  * Amazon API Gateway for exposing backend APIs.
-  * AWS Lambda for serverless business logic.
-  * Amazon DynamoDB for NoSQL data storage.
-  * AWS IAM for authentication and access control.
-  * AWS Elemental MediaConvert for video transcoding.
+* Documented the overall system architecture, including the interaction between:
+  * Amazon S3
+  * Amazon CloudFront
+  * Amazon API Gateway
+  * AWS Lambda
+  * Amazon DynamoDB
+  * AWS Elemental MediaConvert
+  * AWS IAM
 
-* Learned how users interact with the frontend while backend services communicate through API Gateway and Lambda.
+* Completed the project overview, objectives, and architecture description.
 
-* Gained an understanding of the complete workflow from file upload, video processing, storage, and content delivery.
+* Wrote deployment instructions and documented the configuration of AWS resources used in the project.
 
-* Prepared the necessary AWS knowledge required for implementing the cloud infrastructure in the following development phases.
+* Prepared architecture diagrams, screenshots, and supporting figures to improve the clarity of the documentation.
 
-* Documented the architecture and service responsibilities to support future development and deployment.
+* Collaborated with team members to review and refine the documentation for consistency and completeness.
+
+* Established a comprehensive documentation set to support the final project submission and presentation.
