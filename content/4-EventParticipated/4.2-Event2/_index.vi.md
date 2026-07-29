@@ -1,10 +1,10 @@
-<!-- ---
+---
 title: "Event 2"
 date: 2025-07-11
 weight: 1
 chapter: false
-pre: " <b> 4.3. </b> "
---- -->
+pre: " <b> 4.2. </b> "
+---
 
 # Báo cáo tổng kết: “AWS Community Sharing – Monitoring, Security và AWS Cloud Practitioner”
 
