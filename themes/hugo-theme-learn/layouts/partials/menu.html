@@ -102,17 +102,19 @@
   </div>
 </nav>
 
-{{ define "section-tree-nav" }} {{ $showvisitedlinks := .showvisitedlinks }} {{
-$currentNode := .currentnode }} {{ $currentFileUniqueID := "" }} {{ with
-$currentNode.File }}{{ $currentFileUniqueID = .UniqueID }}{{ end }} {{with
-.sect}} {{if and .IsSection (or (not .Params.hidden) $.showhidden)}} {{safeHTML
+{{ define "section-tree-nav" }} 
+{{ $showvisitedlinks := .showvisitedlinks }}
+{{ $currentNode := .currentnode }}
+{{ $currentPath := $currentNode.RelPermalink }}
+{{ with .sect }}
+{{if and .IsSection (or (not .Params.hidden) $.showhidden)}} {{safeHTML
 .Params.head}}
 <li
   data-nav-id="{{.RelPermalink}}"
   title="{{.Title}}"
   class="dd-item 
         {{if .IsAncestor $currentNode }}parent{{end}}
-        {{if eq .File.UniqueID $currentFileUniqueID}}active{{end}}
+        {{if eq .RelPermalink $currentPath}}active{{end}}
         {{if .Params.alwaysopen}}parent{{end}}
         "
 >
