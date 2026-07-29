@@ -1,31 +1,40 @@
 ---
-title: "Worklog"
-date: 2024-01-01
-weight: 1
+title: "Week 8 Worklog"
+date: 2026-07-27
+weight: 8
 chapter: false
-pre: " <b> 1. </b> "
+pre: " <b> 1.8. </b> "
 ---
 
-**Week 1:** [Learning about FCAJ program and getting familiar with AWS services](1.1-week1/)
+### Week 8 Objectives:
 
-**Week 2:** [Doing task A...](1.2-week2/)
+* Complete the internship report based on the work accomplished throughout the internship.
+* Summarize the project development process, technical knowledge gained, and project outcomes.
+* Prepare the final internship report for submission.
 
-**Week 3:** [Doing task B...](1.3-week3/)
+### Tasks to be carried out this week:
 
-**Week 4:** [Doing task C...](1.4-week4/)
+| Day | Date | Task | Reference Material |
+| --- | ---- | ---- | ------------------ |
+| 2 | 07/27/2026 | Collect and organize project documents, architecture diagrams, screenshots, and development artifacts.<br>Create the structure of the internship report. | Project Repository, GitHub |
+| 3 | 07/28/2026 | Write the introduction, internship objectives, and company overview.<br>Summarize the project background and development process. | Worklogs, Project Documentation |
+| 4 | 07/29/2026 | Write the system architecture, technologies used, and AWS services implemented in the project.<br>Describe the application development and deployment process. | Project Documentation |
+| 5 | 07/30/2026 | Complete the remaining sections of the report.<br>Add architecture diagrams, screenshots, tables, and project results. | Project Report |
+| 6 | 07/31/2026 | Review the entire internship report.<br>Edit the content, improve formatting, and proofread before submission. | Internship Report |
 
-**Week 5:** [Doing task D...](1.5-week5/)
+### Week 8 Achievements:
 
-**Week 6:** [Doing task E...](1.6-week6/)
+* Successfully completed the internship report based on the work carried out during the internship.
 
-**Week 7:** [Doing task G...](1.7-week7/)
+* Documented the following aspects of the project:
+  * Internship objectives.
+  * Project development process.
+  * System architecture.
+  * Technologies and AWS services used.
+  * Project outcomes and lessons learned.
 
-**Week 8:** [Doing task H...](1.8-week8/)
+* Completed the architecture diagrams, screenshots, and supporting figures included in the report.
 
-**Week 9:** [Doing task I...](1.9-week9/)
+* Reviewed and refined the report to improve content accuracy, formatting, and overall presentation.
 
-**Week 10:** [Doing task L...](1.10-week10/)
-
-**Week 11:** [Doing task M...](1.11-week11/)
-
-**Week 12:** [Doing task N...](1.12-week12/)
+* Finalized the internship report and prepared it for submission to both the internship organization and the university.

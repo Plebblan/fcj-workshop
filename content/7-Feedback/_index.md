@@ -6,42 +6,46 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+> This section contains my personal reflections and feedback regarding my experience in the First Cloud AI Journey program. I hope these comments can contribute to improving the internship experience for future participants.
 
 ### Overall Evaluation
 
 **1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+The working environment was welcoming, collaborative, and supportive throughout the internship. Team members were approachable and willing to assist whenever I encountered challenges. The workspace was well organized, creating a comfortable atmosphere that allowed me to stay productive and focused.
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+**2. Relevance of Work to Academic Major**  
+The internship tasks closely matched my academic background while exposing me to practical cloud technologies and software development workflows. This combination helped bridge the gap between theoretical knowledge and real-world implementation.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+**3. Learning & Skill Development Opportunities**  
+The internship provided valuable opportunities to strengthen both technical and soft skills. Besides improving my knowledge of AWS Cloud services and web application development, I also gained experience in teamwork, project collaboration, documentation, and professional communication.
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+**4. Company Culture & Team Spirit**  
+The team maintained a professional yet friendly working culture where everyone treated each other with respect. Collaboration was highly encouraged, and team members willingly shared knowledge and supported one another, making it easy for interns to integrate into the working environment.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
-
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+**5. Internship Policies / Benefits**  
+The internship program offered a flexible and supportive learning environment, allowing interns to balance learning and assigned responsibilities effectively. Opportunities to participate in technical sharing sessions and community events also enhanced the overall internship experience.
 
 ---
 
 ### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+
+- **What did you find most satisfying during your internship?**  
+  The most rewarding part of my internship was having the opportunity to apply AWS Cloud knowledge to a real project while continuously learning from experienced mentors and teammates. It was satisfying to see my work contribute to an actual application.
+
+- **What do you think the company should improve for future interns?**  
+  Overall, I had a positive experience throughout the internship and did not encounter any significant issues. The current internship structure and support system were well organized and effective.
+
+- **If recommending to a friend, would you suggest they intern here? Why or why not?**  
+  Yes. I would confidently recommend this internship to friends because it provides a supportive learning environment, practical project experience, knowledgeable mentors, and many opportunities to develop both technical and professional skills.
 
 ---
 
 ### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+
+**Suggestions:** None.
+
+**Expectations:** None.
+
+**Any other comments (free sharing):**  
+I sincerely appreciate the opportunity to participate in the First Cloud AI Journey program. The internship has been a meaningful learning experience that helped me grow both technically and professionally. I would like to thank the mentors, administrators, and all team members for their guidance, support, and encouragement throughout the program.
+```

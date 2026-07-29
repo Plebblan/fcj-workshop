@@ -1,126 +1,126 @@
 <!-- ---
 title: "Event 1"
-date: 2024-01-01
+date: 2025-06-20
 weight: 1
 chapter: false
-pre: " <b> 4.1. </b> "
----
+pre: " <b> 4.4. </b> "
+--- -->
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Summary Report: “AWS Cloud Architecture Challenge”
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Provide students with hands-on experience in designing scalable and reliable cloud architectures using AWS services.
+- Strengthen participants' understanding of AWS architecture best practices and the AWS Well-Architected Framework.
+- Encourage teamwork, critical thinking, and technical presentation skills through a competitive environment.
+- Promote practical problem-solving by requiring teams to design cloud solutions for real-world business scenarios.
 
 ### Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- **Competition Organizing Committee** – Event Introduction and Competition Rules
+- **Technical Judges** – AWS Solution Architects and Faculty Members
+- **Student Teams** – Eight competing teams presenting their cloud architecture solutions
 
 ### Key Highlights
 
-#### Identifying the drawbacks of legacy application architecture
+#### Competition Format
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+- **Eight teams** consisting of **five university students** competed in a **single-elimination tournament**.
+- Each round required teams to analyze a business case and design an AWS cloud architecture within a limited time.
+- Teams presented their proposed architectures before a panel of judges who evaluated both technical design and presentation quality.
+- The winning team from each match advanced to the next round until a champion was determined.
 
-#### Transitioning to modern application architecture – Microservices
+#### Cloud Architecture Design
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+Each team was challenged to design an AWS solution that emphasized:
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+- **High availability** using multiple Availability Zones
+- **Scalability** through elastic cloud services
+- **Security** following AWS best practices
+- **Cost optimization** by selecting appropriate AWS pricing models and managed services
+- **Reliability** through backup, monitoring, and disaster recovery strategies
 
-#### Domain-Driven Design (DDD)
+#### Architecture Presentation
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+Teams explained:
 
-#### Event-Driven Architecture
+- Business requirements and design assumptions
+- AWS services selected for the solution
+- Network architecture and application workflow
+- Security controls including IAM, Security Groups, and encryption
+- Monitoring, logging, and operational management
+- Estimated cloud cost and scalability considerations
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+#### Judges' Feedback
 
-#### Compute Evolution
+The judges emphasized several important design principles:
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
-
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+- Architecture decisions should always align with business requirements.
+- Managed AWS services can reduce operational complexity while improving reliability.
+- Security and monitoring should be integrated into the architecture from the beginning rather than added later.
+- Simplicity, scalability, and maintainability are often more valuable than unnecessarily complex designs.
 
 ### Key Takeaways
 
-#### Design Mindset
+#### Cloud Architecture Design
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+- **Business-first approach**: Understand customer requirements before selecting AWS services.
+- **Well-Architected thinking**: Design systems that balance security, reliability, performance, operational excellence, and cost optimization.
+- **Scalable solutions**: Choose architectures that can grow with increasing workloads.
 
-#### Technical Architecture
+#### AWS Best Practices
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+- **High availability**: Deploy critical resources across multiple Availability Zones.
+- **Least privilege**: Apply IAM best practices to control access securely.
+- **Monitoring and observability**: Use CloudWatch and logging services to maintain system health.
+- **Cost awareness**: Optimize infrastructure without sacrificing performance or reliability.
 
-#### Modernization Strategy
+#### Team Collaboration
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+- **Clear communication**: Effective collaboration leads to better technical decisions.
+- **Role allocation**: Assign responsibilities based on each member's strengths.
+- **Presentation skills**: Explaining architecture clearly is just as important as designing it.
 
 ### Applying to Work
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- **Follow the AWS Well-Architected Framework** when designing future cloud solutions.
+- **Consider business requirements first** before selecting technologies or services.
+- **Design scalable and secure architectures** using managed AWS services whenever appropriate.
+- **Include monitoring and cost optimization** during the initial design phase instead of treating them as afterthoughts.
+- **Practice presenting technical architectures** to improve communication with stakeholders and customers.
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Participating in the **AWS Cloud Architecture Challenge** was an exciting and valuable learning experience. Watching eight student teams compete in a single-elimination tournament demonstrated how different groups could approach the same problem with unique architectural solutions while still following AWS best practices.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+#### Learning from different architectural approaches
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+- Each team proposed a different solution to the given business scenario, demonstrating that cloud architecture often has multiple valid approaches.
+- Comparing different designs helped me understand the trade-offs between cost, scalability, security, and operational complexity.
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+#### Hands-on architecture thinking
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+- The competition demonstrated the complete process of gathering requirements, selecting AWS services, designing network topology, and explaining technical decisions.
+- The presentations reinforced the importance of considering availability, security, monitoring, and disaster recovery during the design phase.
+
+#### Learning from expert feedback
+
+- The judges provided practical recommendations based on AWS architectural best practices and real-world experience.
+- Their comments highlighted common design mistakes and explained how alternative approaches could improve reliability and maintainability.
+
+#### Teamwork and communication
+
+- Each team divided responsibilities among its five members, allowing everyone to contribute to architecture design, documentation, and presentation.
+- The competition demonstrated that successful cloud projects require both strong technical knowledge and effective collaboration.
 
 #### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+
+- A successful cloud architecture should always begin with business requirements rather than technology choices.
+- There is rarely a single "correct" architecture; understanding design trade-offs is more important than memorizing services.
+- Communication, teamwork, and presentation skills are essential for Solution Architects alongside technical expertise.
 
 #### Some event photos
-*Add your event photos here*  
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration. -->
+*Add your event photos here.*
+
+> Overall, the AWS Cloud Architecture Challenge provided an engaging opportunity to apply cloud computing knowledge in a competitive environment. The event strengthened my understanding of AWS architecture principles, improved my appreciation for collaborative problem-solving, and inspired me to continue developing my cloud solution design skills.

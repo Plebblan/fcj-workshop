@@ -1,32 +1,40 @@
 ---
-title: "Nhật ký công việc"
-date: 2024-01-01
-weight: 1
+title: "Worklog Tuần 8"
+date: 2026-07-27
+weight: 8
 chapter: false
-pre: " <b> 1. </b> "
+pre: " <b> 1.8. </b> "
 ---
 
+### Mục tiêu tuần 8:
 
-**Tuần 1:** [Tìm hiểu chương trình FCAJ và làm quen với một số dịch vụ AWS.](1.1-week1/)
+* Hoàn thiện báo cáo thực tập dựa trên kết quả của dự án.
+* Tổng hợp quá trình thực hiện, những kiến thức đã học và kết quả đạt được trong suốt kỳ thực tập.
+* Chuẩn bị báo cáo hoàn chỉnh để nộp theo yêu cầu của đơn vị thực tập và nhà trường.
 
-**Tuần 2:** [Làm quen với AWS CloudFormation, xây dựng hạ tầng dưới dạng mã (IaC), tìm hiểu và làm quen máy chủ EC2 và một số dịch vụ liên quan.](1.2-week2/)
+### Các công việc cần triển khai trong tuần này:
 
-**Tuần 3:** [Làm công việc B...](1.3-week3/)
+| Thứ | Ngày | Công việc | Nguồn tài liệu |
+| --- | ---- | --------- | -------------- |
+| 2 | 27/07/2026 | Thu thập và sắp xếp các tài liệu, hình ảnh, sơ đồ và kết quả của dự án.<br>Xây dựng bố cục cho báo cáo thực tập. | Project Repository, GitHub |
+| 3 | 28/07/2026 | Viết phần giới thiệu, mục tiêu thực tập và mô tả đơn vị thực tập.<br>Tổng hợp quá trình thực hiện dự án. | Nhật ký công việc, Tài liệu dự án |
+| 4 | 29/07/2026 | Viết nội dung về kiến trúc hệ thống, các công nghệ và dịch vụ AWS đã sử dụng.<br>Mô tả quy trình phát triển và triển khai ứng dụng. | Project Documentation |
+| 5 | 30/07/2026 | Hoàn thiện các chương còn lại của báo cáo.<br>Bổ sung hình ảnh, sơ đồ, bảng biểu và kết quả đạt được của dự án. | Báo cáo dự án |
+| 6 | 31/07/2026 | Rà soát toàn bộ báo cáo.<br>Chỉnh sửa nội dung, định dạng và kiểm tra lỗi trước khi nộp. | Báo cáo thực tập |
 
-**Tuần 4:** [Làm công việc C...](1.4-week4/)
+### Kết quả đạt được tuần 8:
 
-**Tuần 5:** [Làm công việc D...](1.5-week5/)
+* Hoàn thành báo cáo thực tập dựa trên toàn bộ quá trình thực hiện dự án.
 
-**Tuần 6:** [Làm công việc E...](1.6-week6/)
+* Tổng hợp đầy đủ các nội dung về:
+  * Mục tiêu thực tập.
+  * Quá trình thực hiện dự án.
+  * Kiến trúc hệ thống.
+  * Các công nghệ và dịch vụ AWS đã sử dụng.
+  * Kết quả đạt được và những bài học kinh nghiệm.
 
-**Tuần 7:** [Làm công việc G...](1.7-week7/)
+* Hoàn thiện các sơ đồ kiến trúc, hình ảnh minh họa và tài liệu hỗ trợ trong báo cáo.
 
-**Tuần 8:** [Làm công việc H...](1.8-week8/)
+* Chuẩn hóa định dạng, rà soát nội dung và chỉnh sửa các lỗi trước khi hoàn thiện.
 
-**Tuần 9:** [Làm công việc I...](1.9-week9/)
-
-**Tuần 10:** [Làm công việc L...](1.10-week10/)
-
-**Tuần 11:** [Làm công việc M...](1.11-week11/)
-
-**Tuần 12:** [Làm công việc N...](1.12-week12/)
+* Hoàn thành phiên bản cuối của báo cáo thực tập, sẵn sàng để nộp cho đơn vị thực tập và nhà trường.

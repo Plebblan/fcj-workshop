@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 1"
-date: 2024-01-01
+date: 2026-06-14
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
@@ -8,49 +8,34 @@ pre: " <b> 1.1. </b> "
 
 ### Mục tiêu tuần 1:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Tìm hiểu một số dịch vụ cơ bản trên AWS, học các Module mà chương trình cung cấp 
-* Bàn luận về đề tài chung của nhóm và vạch một số kế hoạch cần làm
+* Tìm hiểu các dịch vụ AWS sẽ được sử dụng trong đề tài của nhóm.
+* Hiểu vai trò của từng dịch vụ AWS trong kiến trúc hệ thống và cách chúng phối hợp với nhau.
 
 ### Các công việc cần triển khai trong tuần này:
+
 | Thứ | Ngày | Công việc | Nguồn tài liệu |
 | --- | ---- | --------- | -------------- |
-| 2 | 08/06/2026 | Làm quen với các thành viên FCAJ.<br>Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập. | |
-| 3 | 09/06/2026 | Tạo AWS Free Tier account.<br>Thực hiện các bài lab trong AWS để nhận 100$ credit.<br><strong>Thực hành:</strong><br>&emsp;+ Tạo AWS account.<br>&emsp;+ Học cách khởi chạy máy chủ ảo AWS EC2.<br>&emsp;+ Tìm hiểu các tùy chọn cấu hình cơ bản để tạo một database RDS trong Amazon RDS.<br>&emsp;+ Xây dựng một ứng dụng web đơn giản với một Lambda function và function URL trong AWS Lambda.<br>&emsp;+ Trải nghiệm Generative AI bằng cách gửi một prompt và nhận response trong Amazon Bedrock text playground trong Amazon Bedrock.<br>&emsp;+ Học cách thiết lập ngân sách và cảnh báo để quản lý tài khoản.<br>&emsp;+ Cách sử dụng AWS CLI. | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | 10/06/2026 | Thực tập tại công ty.<br>Tìm hiểu và thống nhất chung đề tài chính của nhóm.<br>Tìm hiểu về VPC, một số khái niệm cơ bản liên quan.<br>Tìm hiểu về bảo mật trong VPC và cách mà các VPC giao tiếp.<br>Tìm hiểu về VPN và cơ chế cân bằng tải Estatic.<br><strong>Thực hành:</strong><br>&emsp;+ Cách khởi tạo VPC, Subnetting, cấu hình bảng Router, cổng Internet Gateway.<br>&emsp;+ Tạo máy chủ ảo EC2 để kiểm thử kết nối. | <https://cloudjourney.awsstudygroup.com/><br><https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i> |
-| 5 | 11/06/2026 | Làm quen với cách thiết kế kiến trúc AWS trên draw.io.<br><strong>Thực hành:</strong><br>&emsp;+ Cách khởi tạo VPC, Subnetting, cấu hình bảng Router, cổng Internet Gateway.<br>&emsp;+ Tạo máy chủ ảo EC2 để kiểm thử kết nối. K<br>&emsp;+ Thiết kế được kiến trúc VPC Đa vùng khả dụng đơn giản. | <https://cloudjourney.awsstudygroup.com/><br><https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i> |
-| 6 | 12/06/2026 | <strong>Thực hành:</strong><br>&emsp;+ Tạo EC2 instance.<br>&emsp;+ Kết nối SSH.<br>&emsp;+ Gắn EBS volume. | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | 08/06/2026 | Tìm hiểu kiến trúc tổng quan của đề tài.<br>Xác định các dịch vụ AWS sẽ sử dụng trong hệ thống. | <https://docs.aws.amazon.com/> |
+| 3 | 09/06/2026 | Tìm hiểu Amazon S3 để lưu trữ dữ liệu và triển khai website tĩnh.<br>Tìm hiểu Amazon CloudFront để phân phối nội dung và tăng hiệu năng truy cập. | <https://docs.aws.amazon.com/> |
+| 4 | 10/06/2026 | Tìm hiểu AWS Lambda và Amazon API Gateway.<br>Nghiên cứu luồng xử lý yêu cầu từ frontend đến backend trong mô hình serverless. | <https://docs.aws.amazon.com/> |
+| 5 | 11/06/2026 | Tìm hiểu Amazon DynamoDB để lưu trữ dữ liệu.<br>Tìm hiểu AWS IAM để quản lý quyền truy cập và bảo mật tài nguyên AWS. | <https://docs.aws.amazon.com/> |
+| 6 | 12/06/2026 | Tìm hiểu AWS Elemental MediaConvert để xử lý và chuyển đổi video.<br>Tổng hợp kiến thức và xây dựng sơ đồ kiến trúc thể hiện sự tương tác giữa các dịch vụ AWS trong hệ thống. | <https://docs.aws.amazon.com/> |
 
 ### Kết quả đạt được tuần 1:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
+* Xác định được các dịch vụ AWS cần sử dụng để triển khai hệ thống của đề tài.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-* Thực hiện tất cả các nhiệm vụ trong AWS Free Tier, tìm hiểu làm quen các dịch vụ cơ bản như AWS EC2, AWS Bedrock, AWS Lamdba, AWS Aurora.
-* Làm quen cách quản lí ngân sách tài khoản AWS trên AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Hiểu được vai trò của từng dịch vụ trong kiến trúc tổng thể:
+  * Amazon S3 dùng để lưu trữ tệp và triển khai giao diện web tĩnh.
+  * Amazon CloudFront dùng để tăng tốc phân phối nội dung đến người dùng.
+  * Amazon API Gateway dùng để cung cấp các API cho ứng dụng.
+  * AWS Lambda dùng để xử lý logic nghiệp vụ theo mô hình serverless.
+  * Amazon DynamoDB dùng để lưu trữ dữ liệu NoSQL.
+  * AWS IAM dùng để quản lý người dùng, quyền truy cập và bảo mật tài nguyên.
+  * AWS Elemental MediaConvert dùng để xử lý và chuyển đổi định dạng video.
 
-* Thiết kế được kiến trúc VPC đơn giản.
-* 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Hiểu được luồng hoạt động của hệ thống, từ giao diện người dùng, API, xử lý nghiệp vụ đến lưu trữ dữ liệu và xử lý video.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Có cái nhìn tổng quan về cách các dịch vụ AWS phối hợp với nhau để xây dựng một hệ thống điện toán đám mây hiện đại.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thành tài liệu tổng hợp về vai trò của từng dịch vụ và sơ đồ kiến trúc ban đầu của hệ thống, làm nền tảng cho việc triển khai ở các tuần tiếp theo.
