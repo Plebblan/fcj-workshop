@@ -3,7 +3,7 @@ title: "Nhật ký tham gia sự kiện"
 date: 2026-06-01
 weight: 1
 chapter: false
-pre: " <b> 1. </b> "
+pre: " <b> 4. </b> "
 ---
 
 **Sự kiện 1:** [Thử thách Kiến trúc Điện toán Đám mây AWS](4.1-event1/)

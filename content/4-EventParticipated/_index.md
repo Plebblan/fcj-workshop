@@ -3,7 +3,7 @@ title: "Eventlog"
 date: 2026-06-01
 weight: 1
 chapter: false
-pre: " <b> 1. </b> "
+pre: " <b> 4. </b> "
 ---
 
 **Event 1:** [AWS Cloud Architecture Challenge](4.1-event1/)
