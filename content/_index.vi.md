@@ -7,10 +7,10 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Phú Thịnh
-&emsp; **Số điện thoại:** 0794240177
+&emsp; **Họ và tên:** Trần Lê Đức An
+&emsp; **Số điện thoại:** 0915648565
 
-&emsp; **Email:** thinh.nguyen110405@hcmut.edu.vn
+&emsp; **Email:** an.tranallegro@hcmut.edu.vn
 
 &emsp; **Trường:** Đại học Bách khoa - Đại học Quốc gia TP.HCM
 

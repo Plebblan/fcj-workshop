@@ -10,11 +10,11 @@ chapter: false
 
 
 ### Student Information:
-&emsp; **Full Name:** Nguyen Phu Thinh
+&emsp; **Full Name:** Tran Le Duc An
 
-&emsp; **Phone Number:** 0794240177
+&emsp; **Phone Number:** 0915648565
 
-&emsp; **Email:** thinh.nguyen110405@hcmut.edu.vn
+&emsp; **Email:** an.tranallegro@hcmut.edu.vn
 
 &emsp; **University:** Ho Chi Minh City University of Technology 
 
