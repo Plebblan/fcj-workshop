@@ -106,7 +106,7 @@
   title="{{ .Title }}"
   class="dd-item
     {{ if .IsAncestor $currentNode }}parent{{ end }}
-    {{ if eq .RelPermalink $currentNode.RelPermalink }}active{{ end }}
+    {{ if and (eq .Kind $currentNode.Kind) (eq .RelPermalink $currentNode.RelPermalink) }}active{{ end }}
     {{ if .Params.alwaysopen }}parent{{ end }}">
   <a href="{{ .RelPermalink }}">
     {{ safeHTML .Params.Pre }}
@@ -146,7 +146,7 @@
 <li
   data-nav-id="{{ .RelPermalink }}"
   title="{{ .Title }}"
-  class="dd-item {{ if eq .RelPermalink $currentNode.RelPermalink }}active{{ end }}">
+  class="dd-item {{ if and (eq .Kind $currentNode.Kind) (eq .RelPermalink $currentNode.RelPermalink) }}active{{ end }}">
   <a href="{{ .RelPermalink }}">
     {{ safeHTML .Params.Pre }}
     {{ or .Params.menuTitle .LinkTitle .Title }}
