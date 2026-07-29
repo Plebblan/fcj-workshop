@@ -1,5 +1,5 @@
 ---
-title: "Eventlog"
+title: "Event Participated"
 date: 2026-06-01
 weight: 4
 chapter: false
