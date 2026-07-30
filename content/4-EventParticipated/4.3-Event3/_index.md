@@ -116,6 +116,6 @@ Participating in the **"FCAJ x Agentic AI Build Week: Show Up. Build. Pitch. WIN
 
 #### Some event photos
 
-*Add your event photos here.*
+(images/3.jpeg)
 
 > Overall, the event broadened my understanding of Agentic AI, modern AI-assisted software development, and collaborative project delivery. It also inspired me to continue exploring AI technologies and apply them in future cloud-based applications.
