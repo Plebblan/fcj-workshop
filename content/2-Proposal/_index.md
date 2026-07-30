@@ -5,111 +5,149 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
-
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+# Cloud Media Converter and Storage on AWS
+## A Serverless Solution for Media Conversion and Cloud Storage
 
 ### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+The Cloud Media Converter and Storage platform is designed to provide users with a convenient way to upload, convert, and store media files using AWS Cloud services. The platform uses a serverless architecture based on Amazon S3, AWS Lambda, Amazon API Gateway, and Amazon DynamoDB to provide scalable media processing while minimizing infrastructure management. Users can upload media files through a web interface, monitor the conversion process, and access the converted files through cloud storage.
+
+The system uses Amazon S3 for storing uploaded and converted media files, AWS Lambda for processing conversion tasks, API Gateway for communication between the web application and backend services, and DynamoDB for tracking conversion jobs and their statuses. AWS CDK is used to define and deploy the infrastructure, allowing the architecture to be managed through Infrastructure as Code.
 
 ### 2. Problem Statement
 ### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+Media files are available in many different formats, and users often need to convert them before sharing, uploading, or using them with other applications. Traditional media conversion usually requires users to install specialized software locally, which can be inconvenient and consumes local storage and computing resources.
+
+When the number and size of files increase, managing the conversion process locally can also become inefficient. Users need to manually upload, process, organize, and store their files. From a development perspective, building a conventional server-based media conversion application also requires maintaining servers even when there are few conversion requests.
 
 ### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+The platform uses Amazon S3 to store uploaded and converted media files, AWS Lambda to handle media-processing tasks, Amazon API Gateway to provide communication between the frontend and backend, and Amazon DynamoDB to track conversion jobs and their processing status.
+
+The system uses presigned URLs to allow users to upload files directly to Amazon S3 instead of transferring large files through the backend. After a file is uploaded, an S3 event automatically triggers the processing Lambda function. The function performs the required conversion and stores the resulting file in S3. DynamoDB records the job information and allows users to check the current status of their conversion.
+
+The platform provides a simple workflow similar to other cloud-based file conversion services while focusing on a lightweight and serverless architecture. Key features include direct cloud uploads, automatic media processing, job status tracking, cloud storage, and scalable AWS infrastructure.
 
 ### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+The solution reduces the need for users to install and maintain local media conversion software while providing a centralized platform for managing media files. Users can access the application through a web interface and use cloud resources for file processing and storage.
+
+The serverless architecture also reduces infrastructure management requirements because AWS Lambda runs processing functions only when required. Amazon S3 provides scalable storage, while DynamoDB provides a managed database for conversion jobs. This allows the system to handle increasing workloads without requiring the development team to maintain traditional servers.
+
+The project also provides a practical learning resource for the development team. It allows team members to gain experience with AWS serverless architecture, event-driven systems, cloud storage, Infrastructure as Code, API development, and secure file uploads.
+
+The platform can also serve as a foundation for future development, such as supporting additional media formats, authentication, file management, automated deployment, and more advanced media-processing features.
 
 ### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+The platform employs a serverless AWS architecture to manage media uploads, conversion, and cloud storage. Users interact with the web application, which communicates with Amazon API Gateway. Lambda functions handle API requests and media processing, while Amazon S3 stores the original and converted files. DynamoDB stores information about conversion jobs and their current status.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+The general workflow is:
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+**User → API Gateway → Lambda → Presigned S3 URL → S3 → Processing Lambda → Converted File → S3**
+
+The conversion status is managed through:
+
+**Processing Lambda → DynamoDB → API Gateway → User**
+
+The architecture is detailed below:
+
+![Cloud Media Converter Architecture]()
+
+![Cloud Media Converter Workflow]()
 
 ### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+- **Amazon S3**: Stores uploaded source media files and converted output files.
+- **AWS Lambda**: Generates presigned URLs, processes uploaded media, and handles conversion tasks.
+- **Amazon API Gateway**: Facilitates communication between the web application and backend Lambda functions.
+- **Amazon DynamoDB**: Stores conversion job information, metadata, and processing status.
+- **AWS CDK**: Defines and deploys the AWS infrastructure using Infrastructure as Code.
+- **AWS IAM**: Controls permissions and secures access between AWS services.
+- **AWS CloudFormation**: Manages the infrastructure generated through AWS CDK.
 
 ### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+- **Web Interface**: Provides users with an interface for selecting, uploading, and converting media files.
+- **API Layer**: Amazon API Gateway receives requests from the web application and invokes the appropriate Lambda functions.
+- **File Upload**: AWS Lambda generates a presigned URL that allows the user to upload the media file directly to Amazon S3.
+- **Data Storage**: Amazon S3 stores the original uploaded media and converted output files.
+- **Media Processing**: An S3 event triggers the processing Lambda when a new media file is uploaded.
+- **Job Management**: Amazon DynamoDB stores job information and allows the system to track conversion progress.
+- **Infrastructure Management**: AWS CDK defines the cloud resources and provides a consistent way to deploy the platform.
 
 ### 4. Technical Implementation
 **Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+
+This project follows 4 main phases:
+- **Build Theory and Draw Architecture**: Research cloud-based media conversion, study AWS services, and design the serverless architecture.
+- **Calculate Price and Check Practicality**: Use AWS Pricing Calculator to estimate the expected operating cost and evaluate the practicality of the proposed architecture.
+- **Fix Architecture for Cost or Solution Fit**: Optimize the AWS architecture based on performance, scalability, security, and cost requirements.
+- **Develop, Test, and Deploy**: Implement the AWS infrastructure with CDK, develop the Lambda functions and web application, integrate all components, and test the system before deployment.
 
 **Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+- **Media Converter Platform**: A web application for uploading and converting media files, with Amazon S3 used for cloud storage and AWS Lambda used for processing.
+- **AWS Backend**: Practical knowledge of Amazon S3, Lambda, API Gateway, DynamoDB, IAM, and AWS CDK is required. S3 events are used to automatically trigger media-processing functions after files are uploaded.
+- **File Upload System**: Presigned S3 URLs are used to allow users to upload files directly to S3, reducing the amount of data transferred through the backend.
+- **Job Tracking**: DynamoDB stores conversion job information and status so that users can monitor whether a file is waiting, processing, completed, or failed.
+- **Infrastructure**: AWS CDK is used to define and deploy the required cloud resources, making the architecture easier to maintain and reproduce.
 
 ### 5. Timeline & Milestones
 **Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+- **Pre-Internship (Month 0)**: 1 month for researching media conversion requirements, studying AWS services, and designing the initial architecture.
+- **Internship (Months 1-3)**: 3 months.
+    - **Month 1**: Study AWS serverless services and implement the initial cloud infrastructure.
+    - **Month 2**: Develop the backend, media-processing workflow, file storage, and job tracking system.
+    - **Month 3**: Complete the web application, integrate all components, test the system, optimize the architecture, and launch the application.
+- **Post-Launch**: Continue improving the platform, monitoring AWS usage, fixing issues, and researching additional media conversion features.
 
 ### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/).
+
+The final cost estimation will depend on the number of uploaded files, average file size, conversion frequency, storage duration, Lambda execution time, API requests, DynamoDB operations, and data transfer.
 
 ### Infrastructure Costs
 - AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+    - **AWS Lambda**: Cost depends on the number of requests and execution time required for media conversion.
+    - **S3 Standard**: Cost depends on the amount of source and converted media stored and the number of storage requests.
+    - **Data Transfer**: Cost depends on the amount of media data transferred between AWS and users.
+    - **Amazon API Gateway**: Cost depends on the number of API requests.
+    - **Amazon DynamoDB**: Cost depends on the number of job records and read/write operations.
+    - **AWS CDK / CloudFormation**: Used to manage infrastructure and does not require continuously running application resources.
 
-Total: $0.7/month, $8.40/12 months
+Total: To be calculated using the AWS Pricing Calculator based on the expected workload.
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+- **Hardware:** $0 one-time additional hardware cost because the platform operates entirely on AWS Cloud infrastructure.
 
 ### 7. Risk Assessment
 #### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+- Large Media Files: High impact, medium probability.
+- Media Conversion Failures: High impact, medium probability.
+- Storage Growth: Medium impact, medium probability.
+- Unauthorized File Access: High impact, low probability.
+- AWS Cost Overruns: Medium impact, low probability.
+- Network or AWS Service Outages: Medium impact, low probability.
 
 #### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+- **Large Files**: Use direct uploads to S3 through presigned URLs to avoid transferring large files through the backend.
+- **Conversion Failures**: Store conversion status and error information in DynamoDB to allow failed jobs to be identified and handled.
+- **Storage**: Regularly remove unnecessary source or converted files and consider lifecycle policies for long-term storage.
+- **Security**: Use IAM least-privilege policies and presigned URLs to restrict access to stored media.
+- **Cost**: Configure AWS budget alerts and regularly monitor and optimize AWS resource usage.
+- **Availability**: Use AWS managed services and event-driven processing to reduce dependency on continuously running servers.
 
 #### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+- Keep the original media file until the conversion has completed successfully.
+- Store failed job information in DynamoDB for troubleshooting and retry operations.
+- Use AWS CDK to redeploy the infrastructure if a major configuration problem occurs.
+- Maintain a local development environment for testing and troubleshooting.
+- Revert to a previous stable infrastructure configuration when necessary.
 
 ### 8. Expected Outcomes
 #### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
+Cloud-based media conversion replaces the need for users to perform all conversion tasks locally.  
+The platform provides direct media uploads, automatic processing, job tracking, and cloud storage.  
+The architecture can be extended to support more users, larger numbers of files, and additional media conversion formats.
+
 #### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+1. A reusable foundation for future cloud-based media processing applications.
+2. Practical experience with AWS serverless and event-driven architecture.
+3. A study resource for learning Amazon S3, Lambda, API Gateway, DynamoDB, IAM, and AWS CDK.
+4. A foundation for adding more media formats and conversion functions.
+5. Potential integration with authentication, monitoring, automated deployment, and advanced media-processing services.
+6. A scalable architecture that can be reused for other cloud-based file processing projects.

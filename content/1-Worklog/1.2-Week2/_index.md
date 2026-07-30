@@ -1,54 +1,43 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
+date: 2026-06-21
 weight: 2
 chapter: false
-pre: " <b> 1.1. </b> "
+pre: " <b> 1.2. </b> "
 ---
-
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Explore AWS services required for the workshop project.
+* Understand how each AWS service contributes to the overall cloud architecture.
 
 ### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ----------------------------------------- |
+| 2 | - Review the proposed project architecture <br> - Identify AWS services used in the system | 06/15/2026 | 06/15/2026 | AWS Documentation |
+| 3 | - Learn about Amazon S3 for static website hosting <br> - Research Amazon CloudFront for content delivery | 06/16/2026 | 06/16/2026 | AWS Documentation |
+| 4 | - Learn AWS Lambda and Amazon API Gateway <br> - Understand request flow between frontend and backend | 06/17/2026 | 06/17/2026 | AWS Documentation |
+| 5 | - Research Amazon DynamoDB for application data storage <br> - Learn AWS IAM for permission and security management | 06/18/2026 | 06/18/2026 | AWS Documentation |
+| 6 | - Explore AWS Elemental MediaConvert for video transcoding <br> - Summarize AWS services and their interactions within the project architecture | 06/19/2026 | 06/19/2026 | AWS Documentation |
 
 ### Week 1 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Identified the AWS services required to implement the project infrastructure.
 
-* Successfully created and configured an AWS Free Tier account.
+* Understood the purpose of each service in the architecture:
+  * Amazon S3 for frontend hosting and file storage.
+  * Amazon CloudFront for faster content delivery.
+  * Amazon API Gateway for exposing backend APIs.
+  * AWS Lambda for serverless business logic.
+  * Amazon DynamoDB for NoSQL data storage.
+  * AWS IAM for authentication and access control.
+  * AWS Elemental MediaConvert for video transcoding.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Learned how users interact with the frontend while backend services communicate through API Gateway and Lambda.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Gained an understanding of the complete workflow from file upload, video processing, storage, and content delivery.
 
-* Used AWS CLI to perform basic operations such as:
+* Prepared the necessary AWS knowledge required for implementing the cloud infrastructure in the following development phases.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Documented the architecture and service responsibilities to support future development and deployment.
