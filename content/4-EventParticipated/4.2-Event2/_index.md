@@ -111,6 +111,6 @@ Attending the **AWS Community Sharing** sessions provided valuable insights into
 
 #### Some event photos
 
-![Event picture](images/2.jpg)
+![Event picture](/fcj-workshop/images/2.jpg)
 
 > Overall, the event broadened my understanding of cloud monitoring, security automation, and AWS certification preparation. The practical demonstrations and expert insights provided valuable knowledge that I can apply in future cloud projects while strengthening my foundation for a career in AWS and Cloud Computing.

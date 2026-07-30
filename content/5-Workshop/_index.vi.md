@@ -6,24 +6,38 @@ chapter: false
 pre: " <b> 5. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Tổng quan
 
+## Giới thiệu
 
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+Cloud Converting Media là quy trình chuyển đổi, mã hóa và tối ưu hóa nội dung đa phương tiện (video, audio, hình ảnh) bằng các dịch vụ đám mây. Trong workshop này, chúng ta sẽ tìm hiểu cách xây dựng pipeline chuyển đổi media an toàn, tự động và có thể mở rộng bằng cách sử dụng storage, compute, event trigger và phân phối nội dung.
 
-#### Tổng quan
+## Mục tiêu workshop
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+* Hiểu kiến trúc chuyển đổi media trên nền tảng cloud.
+* Triển khai workflow upload, chuyển đổi và lưu trữ đầu ra.
+* Tối ưu chất lượng và định dạng media cho nhiều nền tảng.
+* Bảo vệ nội dung bằng IAM, VPC Endpoint và chính sách truy cập.
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
+## Lợi ích chính
 
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
+* **Mở rộng linh hoạt:** Xử lý nhiều file media đồng thời mà không cần đầu tư hạ tầng tại chỗ.
+* **Tự động hóa:** Kích hoạt chuyển đổi media bằng sự kiện upload hoặc lịch trình.
+* **Phân phối nhanh:** Sử dụng CDN để phục vụ nội dung đã chuyển đổi với độ trễ thấp.
+* **Tiết kiệm chi phí:** Chỉ trả tiền cho tài nguyên sử dụng thực tế và xóa file tạm khi không cần thiết.
 
-#### Nội dung
+## Kiến trúc cơ bản
+
+Một hệ thống Cloud Converting Media thường gồm các thành phần:
+
+1. **Media source:** File media upload vào storage như Amazon S3.
+2. **Event trigger:** Sự kiện upload hoặc API call kích hoạt workflow.
+3. **Media conversion:** Dịch vụ chuyển mã hoặc compute instance thực hiện mã hóa và tạo các định dạng đầu ra.
+4. **Output storage:** Lưu trữ file đã chuyển đổi theo nhiều định dạng và độ phân giải.
+5. **Distribution:** CDN hoặc endpoint riêng tư để phân phối nội dung.
+6. **Monitoring:** Giám sát tiến trình, thời gian xử lý và lỗi.
+
+## Nội dung
 
 1. [Tổng quan về workshop](5.1-Workshop-overview/)
 2. [Chuẩn bị](5.2-Prerequiste/)
