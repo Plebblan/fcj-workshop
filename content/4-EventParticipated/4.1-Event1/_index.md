@@ -10,117 +10,137 @@ pre: " <b> 4.1. </b> "
 
 ### Event Objectives
 
-- Provide students with hands-on experience in designing scalable and reliable cloud architectures using AWS services.
-- Strengthen participants' understanding of AWS architecture best practices and the AWS Well-Architected Framework.
-- Encourage teamwork, critical thinking, and technical presentation skills through a competitive environment.
-- Promote practical problem-solving by requiring teams to design cloud solutions for real-world business scenarios.
+- Provide students with an opportunity to test their knowledge of cloud computing and AWS architecture.
+- Strengthen participants' understanding of AWS services, cloud architecture principles, and best practices.
+- Encourage critical thinking and problem-solving through a competitive quiz format.
+- Create an engaging environment where students can apply their AWS knowledge to practical architecture-related questions.
+- Promote teamwork and communication among students while competing against other teams.
 
 ### Speakers
 
 - **Competition Organizing Committee** – Event Introduction and Competition Rules
 - **Technical Judges** – AWS Solution Architects and Faculty Members
-- **Student Teams** – Eight competing teams presenting their cloud architecture solutions
+- **Student Teams** – Eight competing teams consisting of university students
 
 ### Key Highlights
 
 #### Competition Format
 
-- **Eight teams** consisting of **five university students** competed in a **single-elimination tournament**.
-- Each round required teams to analyze a business case and design an AWS cloud architecture within a limited time.
-- Teams presented their proposed architectures before a panel of judges who evaluated both technical design and presentation quality.
-- The winning team from each match advanced to the next round until a champion was determined.
+- **Eight teams** consisting of **five university students** participated in the competition.
+- The competition was organized in a **point-based quiz format** focusing on AWS Cloud Architecture and related cloud computing knowledge.
+- The quiz consisted of **10 questions**, with the **point value increasing for each question**.
+- Teams had to discuss each question and submit their answer within the allocated time.
+- Questions with higher point values required participants to demonstrate deeper understanding and stronger architectural reasoning.
+- The team with the **highest total score** at the end of the 10 questions was determined as the winner.
 
-#### Cloud Architecture Design
+#### AWS Cloud Architecture Quiz
 
-Each team was challenged to design an AWS solution that emphasized:
+The questions covered different aspects of AWS cloud architecture, including:
 
-- **High availability** using multiple Availability Zones
-- **Scalability** through elastic cloud services
-- **Security** following AWS best practices
-- **Cost optimization** by selecting appropriate AWS pricing models and managed services
-- **Reliability** through backup, monitoring, and disaster recovery strategies
+- **AWS Services**: Understanding the purpose and appropriate use cases of AWS services.
+- **Networking**: VPC, subnets, routing, security groups, and connectivity.
+- **Compute**: Selecting appropriate compute services based on application requirements.
+- **Storage**: Understanding different AWS storage services and their appropriate use cases.
+- **Databases**: Selecting suitable database solutions for different workloads.
+- **Security**: Applying AWS security principles and access-control practices.
+- **Scalability and Availability**: Understanding how cloud architectures can handle increasing workloads and maintain availability.
+- **Cost Optimization**: Selecting appropriate services and architectures while considering operational costs.
 
-#### Architecture Presentation
+#### Increasing Difficulty and Point Values
 
-Teams explained:
+- The quiz started with questions worth fewer points, allowing teams to demonstrate their fundamental AWS knowledge.
+- Later questions were worth more points and required participants to apply their knowledge to more complex cloud architecture scenarios.
+- The increasing point values made strategic decision-making important because teams had to balance confidence, accuracy, and the potential score gained from more difficult questions.
+- The format encouraged participants to think carefully before submitting answers, especially for high-value questions.
 
-- Business requirements and design assumptions
-- AWS services selected for the solution
-- Network architecture and application workflow
-- Security controls including IAM, Security Groups, and encryption
-- Monitoring, logging, and operational management
-- Estimated cloud cost and scalability considerations
+#### Team Discussion
 
-#### Judges' Feedback
+During the competition:
 
-The judges emphasized several important design principles:
+- Each team worked together to analyze the questions and identify the most appropriate answers.
+- Team members shared their knowledge of AWS services and architecture concepts.
+- Discussions required participants to quickly compare different AWS solutions and understand their advantages and limitations.
+- Effective communication and teamwork were important for reaching a final answer within the available time.
 
-- Architecture decisions should always align with business requirements.
-- Managed AWS services can reduce operational complexity while improving reliability.
-- Security and monitoring should be integrated into the architecture from the beginning rather than added later.
-- Simplicity, scalability, and maintainability are often more valuable than unnecessarily complex designs.
+#### Competition Results and Feedback
+
+The competition demonstrated that AWS cloud architecture requires more than memorizing individual AWS services. Participants needed to understand how different services work together and how architectural decisions should match specific requirements.
+
+The event also highlighted several important principles:
+
+- AWS services should be selected based on the actual requirements of the system.
+- Different architectures can solve the same problem, but each approach has different trade-offs.
+- Security, scalability, reliability, and cost should be considered when making architectural decisions.
+- A strong understanding of AWS fundamentals helps participants solve more complex architecture problems.
 
 ### Key Takeaways
 
-#### Cloud Architecture Design
+#### Cloud Architecture Knowledge
 
-- **Business-first approach**: Understand customer requirements before selecting AWS services.
-- **Well-Architected thinking**: Design systems that balance security, reliability, performance, operational excellence, and cost optimization.
-- **Scalable solutions**: Choose architectures that can grow with increasing workloads.
+- **Understand the purpose of each service**: Knowing what an AWS service does is important before deciding when to use it.
+- **Architecture thinking**: Cloud solutions should be designed by considering how multiple services work together.
+- **Trade-off analysis**: Different solutions can provide different levels of performance, scalability, reliability, and cost efficiency.
 
 #### AWS Best Practices
 
-- **High availability**: Deploy critical resources across multiple Availability Zones.
-- **Least privilege**: Apply IAM best practices to control access securely.
-- **Monitoring and observability**: Use CloudWatch and logging services to maintain system health.
-- **Cost awareness**: Optimize infrastructure without sacrificing performance or reliability.
+- **Security**: Apply appropriate access controls and security mechanisms when designing cloud solutions.
+- **High availability**: Understand how AWS services can be combined to improve system availability.
+- **Scalability**: Select services that can scale according to application requirements.
+- **Cost awareness**: Consider the cost implications of architectural decisions.
 
 #### Team Collaboration
 
-- **Clear communication**: Effective collaboration leads to better technical decisions.
-- **Role allocation**: Assign responsibilities based on each member's strengths.
-- **Presentation skills**: Explaining architecture clearly is just as important as designing it.
+- **Clear communication**: Sharing ideas effectively helps teams reach better decisions within a limited amount of time.
+- **Knowledge sharing**: Different team members can contribute different areas of AWS knowledge.
+- **Decision making**: Teams need to evaluate different answers and agree on the most appropriate solution quickly.
+- **Time management**: Managing discussion time is important when answering questions in a competitive environment.
 
 ### Applying to Work
 
-- **Follow the AWS Well-Architected Framework** when designing future cloud solutions.
-- **Consider business requirements first** before selecting technologies or services.
-- **Design scalable and secure architectures** using managed AWS services whenever appropriate.
-- **Include monitoring and cost optimization** during the initial design phase instead of treating them as afterthoughts.
-- **Practice presenting technical architectures** to improve communication with stakeholders and customers.
+- **Strengthen AWS fundamentals** by regularly reviewing the purpose and use cases of major AWS services.
+- **Practice architecture questions** to improve the ability to select suitable AWS services based on requirements.
+- **Consider multiple factors** such as security, scalability, reliability, performance, and cost when designing cloud solutions.
+- **Improve technical decision-making** by comparing different architectural approaches instead of focusing on a single solution.
+- **Develop teamwork and communication skills** when discussing technical problems and making decisions as a group.
 
 ### Event Experience
 
-Participating in the **AWS Cloud Architecture Challenge** was an exciting and valuable learning experience. Watching eight student teams compete in a single-elimination tournament demonstrated how different groups could approach the same problem with unique architectural solutions while still following AWS best practices.
+Participating in the **AWS Cloud Architecture Challenge** was an exciting and valuable learning experience. The point-based quiz format created a competitive environment where eight student teams had to work together to answer 10 AWS-related questions, with each question carrying an increasing number of points.
 
-#### Learning from different architectural approaches
+#### Learning through competitive questions
 
-- Each team proposed a different solution to the given business scenario, demonstrating that cloud architecture often has multiple valid approaches.
-- Comparing different designs helped me understand the trade-offs between cost, scalability, security, and operational complexity.
+- The quiz provided an opportunity to review and apply knowledge of AWS services and cloud architecture.
+- The increasing point values encouraged teams to carefully consider more difficult questions and evaluate their confidence before submitting answers.
+- The questions demonstrated that understanding AWS architecture requires both theoretical knowledge and the ability to apply that knowledge to different situations.
 
-#### Hands-on architecture thinking
+#### Improving architecture thinking
 
-- The competition demonstrated the complete process of gathering requirements, selecting AWS services, designing network topology, and explaining technical decisions.
-- The presentations reinforced the importance of considering availability, security, monitoring, and disaster recovery during the design phase.
-
-#### Learning from expert feedback
-
-- The judges provided practical recommendations based on AWS architectural best practices and real-world experience.
-- Their comments highlighted common design mistakes and explained how alternative approaches could improve reliability and maintainability.
+- The competition required participants to analyze questions and determine which AWS service or architectural approach was most appropriate.
+- Comparing possible answers helped me understand that AWS architecture involves making decisions based on requirements rather than simply choosing the most familiar service.
+- Higher-value questions required more careful reasoning and helped reinforce the importance of understanding the relationships between different AWS services.
 
 #### Teamwork and communication
 
-- Each team divided responsibilities among its five members, allowing everyone to contribute to architecture design, documentation, and presentation.
-- The competition demonstrated that successful cloud projects require both strong technical knowledge and effective collaboration.
+- Each team consisted of five students who worked together throughout the quiz.
+- Team members discussed possible answers, shared their AWS knowledge, and evaluated different approaches before reaching a final decision.
+- The limited time available for each question encouraged teams to communicate clearly and make decisions efficiently.
+
+#### Learning from the competition
+
+- The competition showed that strong AWS knowledge is developed through both studying and practical problem-solving.
+- The point-based format demonstrated the importance of prioritizing difficult decisions and managing time effectively.
+- Observing other teams' approaches also provided an opportunity to learn different ways of analyzing AWS architecture questions.
 
 #### Lessons learned
 
-- A successful cloud architecture should always begin with business requirements rather than technology choices.
-- There is rarely a single "correct" architecture; understanding design trade-offs is more important than memorizing services.
-- Communication, teamwork, and presentation skills are essential for Solution Architects alongside technical expertise.
+- Understanding AWS services is more valuable when combined with knowledge of their practical use cases.
+- Cloud architecture requires careful consideration of requirements, trade-offs, security, scalability, reliability, and cost.
+- There is not always one obvious solution to an architecture problem; understanding why a particular solution is appropriate is essential.
+- Teamwork and communication are important when solving technical problems under time constraints.
+- Continuous practice with AWS architecture questions can improve both technical knowledge and problem-solving ability.
 
 #### Some event photos
 
 *Add your event photos here.*
 
-> Overall, the AWS Cloud Architecture Challenge provided an engaging opportunity to apply cloud computing knowledge in a competitive environment. The event strengthened my understanding of AWS architecture principles, improved my appreciation for collaborative problem-solving, and inspired me to continue developing my cloud solution design skills.
+> Overall, the AWS Cloud Architecture Challenge provided an engaging opportunity to test and apply AWS knowledge in a competitive environment. The 10-question point-based format helped strengthen my understanding of AWS cloud architecture, encouraged faster technical decision-making, and demonstrated the importance of teamwork and communication when solving cloud-related problems.

@@ -16,11 +16,11 @@ pre: " <b> 1.7. </b> "
 
 | Day | Date | Task | Reference Material |
 | --- | ---- | ---- | ------------------ |
-| 2 | 07/20/2026 | Review the completed project and identify the documents required for project submission.<br>Assign documentation tasks among team members. | Project Repository |
-| 3 | 07/21/2026 | Write the project overview, objectives, and system architecture documentation.<br>Create architecture diagrams illustrating AWS service interactions. | AWS Documentation, draw.io |
-| 4 | 07/22/2026 | Document the frontend and backend implementation.<br>Describe the responsibilities of each AWS service used in the project. | Project Source Code |
-| 5 | 07/23/2026 | Write deployment and configuration guides.<br>Document the steps for deploying the application using Amazon S3, CloudFront, API Gateway, and AWS Lambda. | AWS Documentation |
-| 6 | 07/24/2026 | Review and revise all documentation.<br>Prepare screenshots, diagrams, and supporting materials for the final report and presentation. | Project Repository |
+| 2 | 07/20/2026 | Review the completed project and identify the documents required for project submission.<br>Assign documentation tasks among team members. |
+| 3 | 07/21/2026 | Write the project overview, objectives, and system architecture documentation.<br>Create architecture diagrams illustrating AWS service interactions. |
+| 4 | 07/22/2026 | Document the frontend and backend implementation.<br>Describe the responsibilities of each AWS service used in the project. |
+| 5 | 07/23/2026 | Write deployment and configuration guides.<br>Document the steps for deploying the application using Amazon S3, CloudFront, API Gateway, and AWS Lambda. |
+| 6 | 07/24/2026 | Review and revise all documentation.<br>Prepare screenshots, diagrams, and supporting materials for the final report and presentation. |
 
 ### Week 7 Achievements:
 

@@ -16,11 +16,11 @@ pre: " <b> 1.7. </b> "
 
 | Thứ | Ngày | Công việc | Nguồn tài liệu |
 | --- | ---- | --------- | -------------- |
-| 2 | 20/07/2026 | Rà soát toàn bộ dự án đã hoàn thành.<br>Thống nhất cấu trúc tài liệu và phân công nội dung cho các thành viên. | Source Code, GitHub Repository |
-| 3 | 21/07/2026 | Viết phần giới thiệu dự án, mục tiêu và kiến trúc tổng thể của hệ thống.<br>Thiết kế sơ đồ mô tả luồng hoạt động của các dịch vụ AWS. | AWS Documentation, draw.io |
-| 4 | 22/07/2026 | Hoàn thiện tài liệu mô tả frontend và backend.<br>Viết tài liệu giải thích vai trò và cách tích hợp của các dịch vụ AWS trong hệ thống. | Project Source Code |
-| 5 | 23/07/2026 | Hoàn thiện hướng dẫn triển khai hệ thống.<br>Mô tả quy trình triển khai frontend, backend và cấu hình các dịch vụ AWS. | AWS Documentation |
-| 6 | 24/07/2026 | Kiểm tra, chỉnh sửa và chuẩn hóa toàn bộ tài liệu.<br>Bổ sung hình ảnh, sơ đồ kiến trúc và ảnh minh họa để chuẩn bị cho buổi báo cáo cuối kỳ. | Project Repository |
+| 2 | 20/07/2026 | Rà soát toàn bộ dự án đã hoàn thành.<br>Thống nhất cấu trúc tài liệu và phân công nội dung cho các thành viên. |
+| 3 | 21/07/2026 | Viết phần giới thiệu dự án, mục tiêu và kiến trúc tổng thể của hệ thống.<br>Thiết kế sơ đồ mô tả luồng hoạt động của các dịch vụ AWS. |
+| 4 | 22/07/2026 | Hoàn thiện tài liệu mô tả frontend và backend.<br>Viết tài liệu giải thích vai trò và cách tích hợp của các dịch vụ AWS trong hệ thống. |
+| 5 | 23/07/2026 | Hoàn thiện hướng dẫn triển khai hệ thống.<br>Mô tả quy trình triển khai frontend, backend và cấu hình các dịch vụ AWS. |
+| 6 | 24/07/2026 | Kiểm tra, chỉnh sửa và chuẩn hóa toàn bộ tài liệu.<br>Bổ sung hình ảnh, sơ đồ kiến trúc và ảnh minh họa để chuẩn bị cho buổi báo cáo cuối kỳ. |
 
 ### Kết quả đạt được tuần 7:
 

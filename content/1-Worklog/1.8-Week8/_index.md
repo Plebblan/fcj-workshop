@@ -16,11 +16,11 @@ pre: " <b> 1.8. </b> "
 
 | Day | Date | Task | Reference Material |
 | --- | ---- | ---- | ------------------ |
-| 2 | 07/27/2026 | Collect and organize project documents, architecture diagrams, screenshots, and development artifacts.<br>Create the structure of the internship report. | Project Repository, GitHub |
-| 3 | 07/28/2026 | Write the introduction, internship objectives, and company overview.<br>Summarize the project background and development process. | Worklogs, Project Documentation |
-| 4 | 07/29/2026 | Write the system architecture, technologies used, and AWS services implemented in the project.<br>Describe the application development and deployment process. | Project Documentation |
-| 5 | 07/30/2026 | Complete the remaining sections of the report.<br>Add architecture diagrams, screenshots, tables, and project results. | Project Report |
-| 6 | 07/31/2026 | Review the entire internship report.<br>Edit the content, improve formatting, and proofread before submission. | Internship Report |
+| 2 | 07/27/2026 | Collect and organize project documents, architecture diagrams, screenshots, and development artifacts.<br>Create the structure of the internship report. |
+| 3 | 07/28/2026 | Write the introduction, internship objectives, and company overview.<br>Summarize the project background and development process. |
+| 4 | 07/29/2026 | Write the system architecture, technologies used, and AWS services implemented in the project.<br>Describe the application development and deployment process. |
+| 5 | 07/30/2026 | Complete the remaining sections of the report.<br>Add architecture diagrams, screenshots, tables, and project results. |
+| 6 | 07/31/2026 | Review the entire internship report.<br>Edit the content, improve formatting, and proofread before submission. |
 
 ### Week 8 Achievements:
 

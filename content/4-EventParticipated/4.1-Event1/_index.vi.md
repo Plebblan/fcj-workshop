@@ -1,5 +1,5 @@
 ---
-title: "Sự kiện 1"
+title: "Event 1"
 date: 2025-06-20
 weight: 1
 chapter: false
@@ -10,119 +10,137 @@ pre: " <b> 4.1. </b> "
 
 ### Mục tiêu sự kiện
 
-- Tạo cơ hội cho sinh viên vận dụng kiến thức về AWS Cloud thông qua việc thiết kế kiến trúc hệ thống cho các bài toán thực tế.
-- Giúp sinh viên hiểu rõ hơn về **AWS Well-Architected Framework** và các nguyên tắc thiết kế hệ thống trên nền tảng đám mây.
-- Rèn luyện kỹ năng phân tích yêu cầu, giải quyết vấn đề, làm việc nhóm và thuyết trình kỹ thuật.
-- Khuyến khích tinh thần học hỏi, sáng tạo và ứng dụng các dịch vụ AWS trong việc xây dựng các giải pháp Cloud.
+- Tạo cơ hội để sinh viên kiểm tra kiến thức về điện toán đám mây và kiến trúc AWS.
+- Củng cố hiểu biết của người tham gia về các dịch vụ AWS, nguyên tắc thiết kế kiến trúc cloud và các phương pháp thực hành tốt.
+- Khuyến khích tư duy phản biện và khả năng giải quyết vấn đề thông qua hình thức thi quiz cạnh tranh.
+- Tạo môi trường để sinh viên áp dụng kiến thức AWS vào các câu hỏi liên quan đến kiến trúc và các tình huống thực tế.
+- Thúc đẩy tinh thần làm việc nhóm và giao tiếp giữa các sinh viên trong quá trình thi đấu.
 
 ### Diễn giả
 
-- **Ban tổ chức** – Giới thiệu thể lệ và nội dung cuộc thi.
-- **Ban giám khảo** – Các Solution Architect và giảng viên chuyên môn.
-- **08 đội thi sinh viên** – Trình bày và bảo vệ phương án thiết kế kiến trúc AWS Cloud.
+- **Ban tổ chức cuộc thi** – Giới thiệu sự kiện và phổ biến thể lệ cuộc thi.
+- **Ban giám khảo kỹ thuật** – Các Solution Architect và giảng viên có kiến thức về AWS.
+- **Các đội sinh viên** – Tám đội thi, mỗi đội gồm năm sinh viên đại học.
 
-### Nội dung nổi bật
+### Những điểm nổi bật
 
-#### Thể thức cuộc thi
+#### Hình thức thi đấu
 
-- **08 đội thi**, mỗi đội gồm **05 sinh viên**, tham gia theo hình thức **đấu loại trực tiếp (Single Elimination)**.
-- Mỗi cặp đội nhận cùng một đề bài về thiết kế kiến trúc hệ thống trên AWS và có thời gian giới hạn để xây dựng giải pháp.
-- Sau thời gian chuẩn bị, các đội trình bày kiến trúc của mình trước ban giám khảo và trả lời các câu hỏi phản biện.
-- Đội có tổng điểm cao hơn sẽ giành quyền đi tiếp cho đến khi tìm ra đội vô địch.
+- **Tám đội**, mỗi đội gồm **năm sinh viên đại học**, tham gia cuộc thi.
+- Cuộc thi được tổ chức dưới hình thức **quiz tính điểm**, tập trung vào AWS Cloud Architecture và các kiến thức liên quan đến điện toán đám mây.
+- Phần thi gồm **10 câu hỏi**, trong đó **giá trị điểm tăng dần theo từng câu hỏi**.
+- Các đội cùng thảo luận từng câu hỏi và đưa ra đáp án trong khoảng thời gian được quy định.
+- Những câu hỏi có giá trị điểm cao yêu cầu người tham gia có kiến thức sâu hơn và khả năng tư duy kiến trúc tốt hơn.
+- Đội có **tổng điểm cao nhất** sau 10 câu hỏi sẽ được xác định là đội chiến thắng.
 
-#### Thiết kế kiến trúc AWS
+#### Quiz về AWS Cloud Architecture
 
-Các đội tập trung xây dựng giải pháp đáp ứng các tiêu chí:
+Các câu hỏi trong cuộc thi bao quát nhiều khía cạnh khác nhau của kiến trúc AWS, bao gồm:
 
-- **Khả năng mở rộng (Scalability)** để đáp ứng lượng người dùng tăng cao.
-- **Tính sẵn sàng cao (High Availability)** bằng cách triển khai trên nhiều Availability Zones.
-- **Bảo mật (Security)** thông qua IAM, Security Groups, mã hóa dữ liệu và phân quyền hợp lý.
-- **Tối ưu chi phí (Cost Optimization)** bằng cách lựa chọn các dịch vụ AWS phù hợp.
-- **Khả năng giám sát (Monitoring)** và đảm bảo tính ổn định của hệ thống.
+- **AWS Services**: Hiểu chức năng và trường hợp sử dụng phù hợp của các dịch vụ AWS.
+- **Networking**: VPC, subnet, routing, security group và các cơ chế kết nối.
+- **Compute**: Lựa chọn dịch vụ compute phù hợp dựa trên yêu cầu của ứng dụng.
+- **Storage**: Hiểu các dịch vụ lưu trữ AWS khác nhau và trường hợp sử dụng phù hợp.
+- **Databases**: Lựa chọn giải pháp cơ sở dữ liệu phù hợp cho từng loại workload.
+- **Security**: Áp dụng các nguyên tắc bảo mật và kiểm soát quyền truy cập trong AWS.
+- **Scalability and Availability**: Hiểu cách thiết kế kiến trúc có thể đáp ứng workload tăng lên và duy trì tính sẵn sàng.
+- **Cost Optimization**: Lựa chọn dịch vụ và kiến trúc phù hợp đồng thời cân nhắc chi phí vận hành.
 
-#### Phần trình bày của các đội
+#### Độ khó và giá trị điểm tăng dần
 
-Mỗi đội lần lượt giới thiệu:
+- Quiz bắt đầu với các câu hỏi có giá trị điểm thấp hơn, giúp các đội thể hiện kiến thức cơ bản về AWS.
+- Các câu hỏi ở phần sau có giá trị điểm cao hơn và yêu cầu người tham gia áp dụng kiến thức vào các tình huống kiến trúc cloud phức tạp hơn.
+- Việc tăng dần giá trị điểm khiến khả năng ra quyết định trở nên quan trọng, vì các đội phải cân bằng giữa độ chắc chắn, độ chính xác và số điểm có thể đạt được từ những câu hỏi khó.
+- Hình thức thi yêu cầu các đội cân nhắc kỹ trước khi đưa ra đáp án, đặc biệt đối với những câu hỏi có giá trị điểm cao.
 
-- Phân tích yêu cầu và bài toán nghiệp vụ.
-- Kiến trúc tổng thể của hệ thống trên AWS.
-- Lý do lựa chọn các dịch vụ AWS trong giải pháp.
-- Luồng xử lý dữ liệu và cách các thành phần trong hệ thống tương tác với nhau.
-- Các giải pháp về bảo mật, giám sát và khả năng mở rộng.
-- Đánh giá chi phí và khả năng triển khai thực tế.
+#### Thảo luận nhóm
 
-#### Nhận xét từ Ban giám khảo
+Trong quá trình thi đấu:
 
-Ban giám khảo nhấn mạnh nhiều nguyên tắc quan trọng trong thiết kế Cloud:
+- Mỗi đội cùng nhau phân tích câu hỏi và xác định đáp án phù hợp nhất.
+- Các thành viên chia sẻ kiến thức về AWS service và các khái niệm kiến trúc cloud.
+- Việc thảo luận yêu cầu các thành viên nhanh chóng so sánh các giải pháp AWS khác nhau và hiểu được ưu điểm cũng như hạn chế của từng phương án.
+- Khả năng giao tiếp và làm việc nhóm đóng vai trò quan trọng trong việc đưa ra đáp án cuối cùng trong thời gian cho phép.
 
-- Kiến trúc cần xuất phát từ yêu cầu nghiệp vụ thay vì lựa chọn công nghệ trước.
-- Ưu tiên sử dụng các dịch vụ Managed Services để giảm chi phí vận hành và tăng tính ổn định.
-- Cần xem xét đồng thời các yếu tố bảo mật, hiệu năng, chi phí và khả năng mở rộng trong quá trình thiết kế.
-- Một kiến trúc đơn giản nhưng đáp ứng đầy đủ yêu cầu thường hiệu quả hơn những thiết kế quá phức tạp.
+#### Kết quả và phản hồi từ cuộc thi
 
-### Bài học rút ra
+Cuộc thi cho thấy kiến thức về AWS Cloud Architecture không chỉ đơn thuần là ghi nhớ các AWS service. Người tham gia cần hiểu cách các dịch vụ khác nhau kết hợp với nhau và cách lựa chọn kiến trúc phù hợp với từng yêu cầu cụ thể.
 
-#### Tư duy thiết kế Cloud
+Sự kiện cũng nhấn mạnh một số nguyên tắc quan trọng:
 
-- **Business-first approach**: Luôn bắt đầu từ nhu cầu của khách hàng và bài toán nghiệp vụ.
-- **Well-Architected Framework**: Cân bằng giữa bảo mật, hiệu năng, độ tin cậy, tối ưu chi phí và vận hành.
-- **Thiết kế có khả năng mở rộng**: Xây dựng hệ thống có thể đáp ứng nhu cầu phát triển trong tương lai.
+- AWS service nên được lựa chọn dựa trên yêu cầu thực tế của hệ thống.
+- Có thể có nhiều kiến trúc khác nhau cùng giải quyết một vấn đề, nhưng mỗi phương án đều có những trade-off riêng.
+- Security, scalability, reliability và cost cần được cân nhắc khi đưa ra quyết định về kiến trúc.
+- Nền tảng kiến thức AWS vững chắc giúp người tham gia giải quyết các vấn đề kiến trúc phức tạp hơn.
 
-#### Kiến thức về AWS
+### Những kiến thức rút ra
 
-- **High Availability**: Triển khai tài nguyên trên nhiều Availability Zones để tăng khả năng chịu lỗi.
-- **Security Best Practices**: Áp dụng nguyên tắc Least Privilege và bảo vệ dữ liệu bằng các cơ chế bảo mật phù hợp.
-- **Monitoring và Logging**: Theo dõi hệ thống bằng các dịch vụ giám sát để phát hiện và xử lý sự cố kịp thời.
-- **Cost Optimization**: Lựa chọn dịch vụ và mô hình triển khai phù hợp nhằm tối ưu chi phí.
+#### Kiến thức về Cloud Architecture
 
-#### Kỹ năng làm việc nhóm
+- **Hiểu mục đích của từng service**: Biết AWS service làm gì là bước quan trọng trước khi quyết định khi nào nên sử dụng service đó.
+- **Tư duy kiến trúc**: Giải pháp cloud cần được thiết kế dựa trên cách nhiều service khác nhau kết hợp và hoạt động cùng nhau.
+- **Phân tích trade-off**: Các giải pháp khác nhau có thể mang lại mức độ performance, scalability, reliability và cost efficiency khác nhau.
 
-- **Phân chia nhiệm vụ hợp lý**: Mỗi thành viên đảm nhận một vai trò phù hợp với thế mạnh của mình.
-- **Trao đổi và phản biện**: Thảo luận để lựa chọn giải pháp tối ưu trước khi trình bày.
-- **Kỹ năng thuyết trình**: Trình bày rõ ràng và bảo vệ các quyết định thiết kế trước ban giám khảo.
+#### AWS Best Practices
+
+- **Security**: Áp dụng các cơ chế kiểm soát quyền truy cập và bảo mật phù hợp khi thiết kế giải pháp cloud.
+- **High availability**: Hiểu cách kết hợp các AWS service để tăng khả năng sẵn sàng của hệ thống.
+- **Scalability**: Lựa chọn các service có khả năng mở rộng phù hợp với yêu cầu của ứng dụng.
+- **Cost awareness**: Cân nhắc ảnh hưởng về chi phí khi đưa ra các quyết định về kiến trúc.
+
+#### Làm việc nhóm
+
+- **Giao tiếp rõ ràng**: Chia sẻ ý tưởng hiệu quả giúp đội đưa ra quyết định tốt hơn trong thời gian giới hạn.
+- **Chia sẻ kiến thức**: Mỗi thành viên có thể đóng góp những kiến thức AWS khác nhau.
+- **Ra quyết định**: Các thành viên cần đánh giá nhiều phương án và nhanh chóng thống nhất giải pháp phù hợp nhất.
+- **Quản lý thời gian**: Phân bổ thời gian thảo luận hợp lý là yếu tố quan trọng khi trả lời các câu hỏi trong môi trường thi đấu.
 
 ### Áp dụng vào công việc
 
-- **Áp dụng AWS Well-Architected Framework** khi thiết kế các hệ thống Cloud trong tương lai.
-- **Phân tích yêu cầu nghiệp vụ** trước khi lựa chọn các dịch vụ AWS phù hợp.
-- **Thiết kế hệ thống bảo mật và có khả năng mở rộng** ngay từ giai đoạn đầu.
-- **Kết hợp Monitoring và Cost Optimization** trong quá trình xây dựng kiến trúc hệ thống.
-- **Nâng cao kỹ năng làm việc nhóm và trình bày kỹ thuật** thông qua các dự án thực tế.
+- **Củng cố kiến thức AWS nền tảng** bằng cách thường xuyên ôn tập chức năng và trường hợp sử dụng của các AWS service quan trọng.
+- **Luyện tập các câu hỏi về architecture** để cải thiện khả năng lựa chọn AWS service phù hợp dựa trên yêu cầu.
+- **Cân nhắc nhiều yếu tố** như security, scalability, reliability, performance và cost khi thiết kế các giải pháp cloud.
+- **Cải thiện khả năng ra quyết định kỹ thuật** bằng cách so sánh nhiều phương án kiến trúc thay vì chỉ tập trung vào một giải pháp duy nhất.
+- **Phát triển kỹ năng teamwork và communication** khi thảo luận các vấn đề kỹ thuật và đưa ra quyết định chung.
 
-### Trải nghiệm tham gia sự kiện
+### Trải nghiệm sự kiện
 
-Tham gia **AWS Cloud Architecture Challenge** là một trải nghiệm rất thú vị và bổ ích. Cuộc thi quy tụ tám đội sinh viên với nhiều ý tưởng thiết kế khác nhau, tạo nên môi trường học tập sôi nổi và mang tính cạnh tranh cao. Mặc dù cùng nhận một đề bài, mỗi đội đều đưa ra cách tiếp cận và giải pháp riêng, giúp người tham dự có cơ hội quan sát nhiều hướng thiết kế Cloud khác nhau.
+Tham gia **AWS Cloud Architecture Challenge** là một trải nghiệm thú vị và có giá trị. Hình thức quiz tính điểm tạo ra một môi trường cạnh tranh, trong đó tám đội sinh viên phải phối hợp để trả lời 10 câu hỏi liên quan đến AWS, với số điểm tăng dần theo từng câu hỏi.
 
-#### Học hỏi từ các phương án kiến trúc
+#### Học hỏi thông qua các câu hỏi cạnh tranh
 
-- Mỗi đội có cách lựa chọn dịch vụ AWS và thiết kế hệ thống khác nhau để đáp ứng cùng một yêu cầu.
-- Việc so sánh các giải pháp giúp em hiểu rõ hơn những ưu điểm và hạn chế của từng phương án thiết kế.
+- Phần thi tạo cơ hội để ôn tập và áp dụng kiến thức về AWS service cũng như cloud architecture.
+- Việc tăng dần giá trị điểm khiến các đội phải cân nhắc kỹ hơn đối với những câu hỏi khó và đánh giá mức độ chắc chắn trước khi đưa ra đáp án.
+- Các câu hỏi cho thấy việc hiểu kiến trúc AWS đòi hỏi cả kiến thức lý thuyết và khả năng áp dụng kiến thức vào từng tình huống cụ thể.
 
-#### Tiếp cận quy trình thiết kế thực tế
+#### Cải thiện tư duy kiến trúc
 
-- Quan sát cách các đội phân tích yêu cầu, xây dựng kiến trúc và giải thích các quyết định kỹ thuật.
-- Hiểu rõ hơn vai trò của khả năng mở rộng, tính sẵn sàng, bảo mật và tối ưu chi phí trong một hệ thống Cloud.
-- Học được cách trình bày sơ đồ kiến trúc một cách trực quan và dễ hiểu.
+- Cuộc thi yêu cầu người tham gia phân tích câu hỏi và xác định AWS service hoặc phương án kiến trúc phù hợp nhất.
+- Việc so sánh các đáp án có thể giúp hiểu rằng kiến trúc AWS cần được xây dựng dựa trên yêu cầu của hệ thống thay vì đơn giản lựa chọn service quen thuộc nhất.
+- Các câu hỏi có giá trị điểm cao yêu cầu suy luận cẩn thận hơn và giúp củng cố tầm quan trọng của việc hiểu mối quan hệ giữa các AWS service.
 
-#### Học hỏi từ phần nhận xét của Ban giám khảo
+#### Làm việc nhóm và giao tiếp
 
-- Ban giám khảo chỉ ra những điểm mạnh và những vấn đề cần cải thiện trong từng phương án thiết kế.
-- Những góp ý về việc lựa chọn dịch vụ AWS, tối ưu kiến trúc và cân bằng giữa hiệu năng với chi phí mang lại nhiều kiến thức thực tiễn.
+- Mỗi đội gồm năm sinh viên cùng phối hợp trong suốt phần thi.
+- Các thành viên thảo luận những đáp án có thể xảy ra, chia sẻ kiến thức AWS và đánh giá các phương án khác nhau trước khi đưa ra quyết định cuối cùng.
+- Thời gian giới hạn cho mỗi câu hỏi yêu cầu các thành viên giao tiếp rõ ràng và đưa ra quyết định một cách hiệu quả.
 
-#### Trải nghiệm tinh thần thi đấu
+#### Học hỏi từ cuộc thi
 
-- Không khí cuộc thi diễn ra sôi nổi khi các đội lần lượt trình bày và bảo vệ giải pháp của mình.
-- Phần hỏi đáp giữa ban giám khảo và các đội thi giúp người tham dự hiểu rõ hơn về tư duy của một Solution Architect khi giải quyết bài toán thực tế.
-- Cuộc thi cũng cho thấy kỹ năng giao tiếp và làm việc nhóm có vai trò quan trọng không kém kiến thức kỹ thuật.
+- Cuộc thi cho thấy kiến thức AWS vững chắc được hình thành thông qua cả việc học lý thuyết và thực hành giải quyết vấn đề.
+- Hình thức thi tính điểm cho thấy tầm quan trọng của việc ưu tiên các quyết định khó và quản lý thời gian hiệu quả.
+- Quan sát cách các đội khác tiếp cận câu hỏi cũng mang lại cơ hội học hỏi những phương pháp khác nhau trong việc phân tích các vấn đề về AWS architecture.
 
-#### Bài học thu được
+#### Bài học kinh nghiệm
 
-- Một kiến trúc Cloud tốt phải xuất phát từ yêu cầu nghiệp vụ thay vì chỉ tập trung vào công nghệ.
-- Không tồn tại một kiến trúc duy nhất là đúng; mỗi giải pháp đều cần cân nhắc giữa hiệu năng, bảo mật, khả năng mở rộng và chi phí.
-- Kỹ năng phân tích, tư duy phản biện và làm việc nhóm là những yếu tố quan trọng trong quá trình thiết kế các giải pháp trên AWS.
+- Hiểu AWS service sẽ có giá trị hơn khi kết hợp với kiến thức về các trường hợp sử dụng thực tế.
+- Cloud architecture yêu cầu cân nhắc cẩn thận các yêu cầu, trade-off, security, scalability, reliability và cost.
+- Không phải lúc nào cũng có một đáp án duy nhất cho một bài toán architecture; hiểu được lý do tại sao một giải pháp phù hợp là điều quan trọng.
+- Teamwork và communication đóng vai trò quan trọng khi giải quyết các vấn đề kỹ thuật trong thời gian giới hạn.
+- Thường xuyên luyện tập các câu hỏi về AWS architecture có thể cải thiện cả kiến thức kỹ thuật và khả năng giải quyết vấn đề.
 
-#### Một số hình ảnh tại sự kiện
+#### Một số hình ảnh sự kiện
 
-*Thêm hình ảnh của bạn tại đây.*
+*Thêm hình ảnh sự kiện tại đây.*
 
-> Nhìn chung, AWS Cloud Architecture Challenge không chỉ là một cuộc thi về kiến thức Cloud mà còn là cơ hội để sinh viên học hỏi, trao đổi kinh nghiệm và rèn luyện kỹ năng thiết kế kiến trúc hệ thống trên AWS. Sự kiện giúp em hiểu rõ hơn về quy trình xây dựng một giải pháp Cloud hoàn chỉnh, đồng thời tạo động lực để tiếp tục học tập và phát triển theo định hướng Solution Architecture.
+> Nhìn chung, AWS Cloud Architecture Challenge đã mang đến một cơ hội thú vị để kiểm tra và áp dụng kiến thức AWS trong một môi trường cạnh tranh. Hình thức thi quiz gồm 10 câu hỏi với số điểm tăng dần giúp tôi củng cố kiến thức về AWS Cloud Architecture, cải thiện khả năng đưa ra quyết định kỹ thuật nhanh chóng, đồng thời nhận thấy tầm quan trọng của teamwork và communication trong quá trình giải quyết các vấn đề liên quan đến cloud.
