@@ -114,6 +114,6 @@ Tham gia sự kiện **"FCAJ x Agentic AI Build Week: Show Up. Build. Pitch. WIN
 
 #### Một số hình ảnh tại sự kiện
 
-(images/3.jpeg)
+![Event picture](images/3.jpg)
 
 > Nhìn chung, sự kiện đã giúp em mở rộng kiến thức về Agentic AI, hiểu rõ hơn cách AI hỗ trợ quá trình phát triển phần mềm và truyền cảm hứng để tiếp tục nghiên cứu, ứng dụng các công nghệ AI vào các dự án Cloud trong tương lai.

@@ -110,6 +110,6 @@ Tham dự buổi chia sẻ về **Monitoring, AWS Security Agent và AWS Cloud P
 
 #### Một số hình ảnh tại sự kiện
 
-(images/2.jpeg)
+![Event picture](images/2.jpg)
 
 > Nhìn chung, buổi chia sẻ đã giúp em hiểu rõ hơn về các khía cạnh quan trọng trong vận hành hệ thống trên AWS, từ monitoring, bảo mật đến lộ trình học tập và đạt chứng chỉ AWS Cloud Practitioner. Những kiến thức và kinh nghiệm được chia sẻ sẽ là nền tảng hữu ích để em tiếp tục phát triển kỹ năng về Cloud Computing và ứng dụng vào các dự án trong tương lai.
