@@ -1,20 +1,20 @@
 ---
-title : "Access S3 from on-premises"
+title : "Access S3 from On-premises Data Center"
 date : 2024-01-01
 weight : 4
 chapter : false
 pre : " <b> 5.4. </b> "
 ---
 
-#### Overview
+#### Objectives
 
-+ In this section, you will create an Interface endpoint to access Amazon S3 from a simulated on-premises environment. The Interface endpoint will allow you to route to Amazon S3 over a VPN connection from your simulated on-premises environment.
+* Establish simulated VPN connection between On-Prem VPC and AWS Cloud.
+* Use Interface VPC Endpoint and VPC Endpoint DNS to access S3 from On-Prem environment.
+* Test S3 access from EC2 on On-Prem VPC via private connection.
 
-+ Why using **Interface endpoint**: 
-    + Gateway endpoints only work with resources running in the VPC where they are created. Interface endpoints work with resources running in VPC, and also resources running in on-premises environments. Connectivty from your on-premises environment to the cloud can be provided by AWS Site-to-Site VPN or AWS Direct Connect.
-    + Interface endpoints allow you to connect to services powered by AWS PrivateLink. These services include some AWS services, services hosted by other AWS customers and partners in their own VPCs (referred to as PrivateLink Endpoint Services), and supported AWS Marketplace Partner services. For this workshop, we will focus on connecting to Amazon S3.
+#### Practical Exercises
 
-![Interface endpoint architecture](/images/5-Workshop/5.4-S3-onprem/diagram3.png)
-
-
-
+1. Ensure Site-to-Site VPN operates between Cloud VPC and On-Prem VPC.
+2. Create suitable Interface VPC Endpoint for S3 or required services.
+3. Configure DNS and routes to access services via endpoint.
+4. Test S3 access from EC2 inside On-Prem VPC.

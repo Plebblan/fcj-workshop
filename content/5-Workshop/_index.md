@@ -6,23 +6,42 @@ chapter: false
 pre: " <b> 5. </b> "
 ---
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# Overview
 
-#### Overview
+## Introduction
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+Cloud Media Converting is the process of converting, encoding, and optimizing multimedia content (video, audio, images) using cloud services. In this workshop, we will explore how to build a secure, automated, and scalable media conversion pipeline using storage, compute, event triggers, and content delivery.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+## Workshop Objectives
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+* Understand media conversion architecture on cloud platforms.
+* Deploy workflows for upload, conversion, and output storage.
+* Optimize media quality and formats for various platforms.
+* Protect content using IAM, VPC Endpoints, and access policies.
 
-#### Content
+## Key Benefits
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
+* **Flexible Scalability:** Process multiple media files concurrently without investing in on-premises infrastructure.
+* **Automation:** Trigger media conversion via upload events or schedules.
+* **Fast Delivery:** Use CDN to serve converted content with low latency.
+* **Cost Efficiency:** Pay only for actual resource usage and delete temporary files when no longer needed.
+
+## Basic Architecture
+
+A Cloud Media Converting system typically includes the following components:
+
+1. **Media source:** Media files uploaded to storage such as Amazon S3.
+2. **Event trigger:** Upload events or API calls triggering the workflow.
+3. **Media conversion:** Transcoding services or compute instances performing encoding and generating output formats.
+4. **Output storage:** Storing converted files in various formats and resolutions.
+5. **Distribution:** CDN or private endpoints to distribute content.
+6. **Monitoring:** Monitoring progress, processing duration, and errors.
+
+## Content
+
+1. [Workshop Overview](5.1-Workshop-overview/)
+2. [Prerequisites](5.2-Prerequiste/)
 3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
+4. [Access S3 from On-premises Data Center](5.4-S3-onprem/)
 5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+6. [Resource Cleanup](5.6-Cleanup/)
