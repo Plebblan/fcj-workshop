@@ -6,13 +6,13 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-Trong thời gian thực tập tại **FCAJ - Cloud AI Journey** từ **06/06/2026** đến **31/07/2026**, tôi đã có cơ hội học hỏi, thực hành và vận dụng những kiến thức được trang bị trên giảng đường vào môi trường làm việc thực tế.
+Trong thời gian thực tập tại **FCAJ - Cloud AI Journey** từ **06/06/2026** đến **31/07/2026**, em đã có cơ hội học hỏi, thực hành và vận dụng những kiến thức được trang bị trên giảng đường vào môi trường làm việc thực tế.
 
-Trong quá trình thực tập, tôi đã tham gia phát triển **ứng dụng web chuyển đổi định dạng tệp được triển khai trên nền tảng AWS**, qua đó nâng cao các kỹ năng về lập trình, phân tích, viết báo cáo, giao tiếp cũng như nhiều kỹ năng chuyên môn khác.
+Trong quá trình thực tập, em đã tham gia phát triển **ứng dụng web chuyển đổi định dạng tệp được triển khai trên nền tảng AWS**, qua đó nâng cao các kỹ năng về lập trình, phân tích, viết báo cáo, giao tiếp cũng như nhiều kỹ năng chuyên môn khác.
 
-Về tác phong làm việc, tôi luôn cố gắng hoàn thành tốt các nhiệm vụ được giao, tuân thủ các quy định của đơn vị thực tập và chủ động phối hợp với các thành viên trong nhóm nhằm nâng cao hiệu quả công việc.
+Về tác phong làm việc, em luôn cố gắng hoàn thành tốt các nhiệm vụ được giao, tuân thủ các quy định của đơn vị thực tập và chủ động phối hợp với các thành viên trong nhóm nhằm nâng cao hiệu quả công việc.
 
-Để có cái nhìn khách quan về quá trình thực tập của bản thân, tôi xin tự đánh giá dựa trên các tiêu chí sau:
+Để có cái nhìn khách quan về quá trình thực tập của bản thân, em xin tự đánh giá dựa trên các tiêu chí sau:
 
 | STT | Tiêu chí | Mô tả | Tốt | Khá | Trung bình |
 | --- | -------------------------------- | ------------------------------------------------------------------------------------------------ | :--: | :--: | :--------: |
@@ -31,7 +31,7 @@ Về tác phong làm việc, tôi luôn cố gắng hoàn thành tốt các nhi�
 
 ### Những điểm cần cải thiện
 
-- Nâng cao ý thức kỷ luật và tuân thủ nghiêm túc các quy định, nội quy của công ty cũng như các tổ chức mà tôi tham gia.
+- Nâng cao ý thức kỷ luật và tuân thủ nghiêm túc các quy định, nội quy của công ty cũng như các tổ chức mà em tham gia.
 - Cải thiện kỹ năng quản lý thời gian để hoàn thành các nhiệm vụ được giao một cách hiệu quả và đúng tiến độ.
 - Tiếp tục trau dồi kỹ năng lập trình, đồng thời hạn chế sự phụ thuộc quá mức vào các công cụ AI trong quá trình phát triển phần mềm.
 - Hoàn thiện kỹ năng ghi chép, lập tài liệu và báo cáo công việc thông qua việc duy trì báo cáo và nhật ký công việc (worklog) đầy đủ, rõ ràng.
