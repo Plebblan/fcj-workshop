@@ -7,147 +7,150 @@ pre: " <b> 2. </b> "
 ---
 
 # Cloud Media Converter and Storage trên AWS
-## Giải pháp Serverless cho Chuyển đổi và Lưu trữ Media trên Cloud
+## Giải pháp serverless cho chuyển đổi và lưu trữ media trên AWS
 
-### 1. Executive Summary
-Nền tảng Cloud Media Converter and Storage được thiết kế nhằm cung cấp cho người dùng một phương thức thuận tiện để tải lên, chuyển đổi và lưu trữ các tệp media bằng các dịch vụ AWS Cloud. Nền tảng sử dụng kiến trúc serverless dựa trên Amazon S3, AWS Lambda, Amazon API Gateway và Amazon DynamoDB nhằm cung cấp khả năng xử lý media có thể mở rộng đồng thời giảm thiểu yêu cầu quản lý cơ sở hạ tầng. Người dùng có thể tải tệp media lên thông qua giao diện web, theo dõi quá trình chuyển đổi và truy cập các tệp đã được chuyển đổi thông qua cloud storage.
+### 1. Tóm tắt điều hành
+Nền tảng Cloud Media Converter and Storage được thiết kế để cung cấp cho người dùng một giải pháp thuận tiện trên web nhằm tải lên, chuyển đổi và lưu trữ các tệp media bằng các dịch vụ AWS Cloud. Hệ thống ứng dụng kiến trúc serverless dựa trên Amazon CloudFront, Amazon API Gateway, AWS Lambda, Amazon S3 và Amazon DynamoDB để giảm yêu cầu quản lý hạ tầng, tăng khả năng mở rộng và tối ưu chi phí.
 
-Hệ thống sử dụng Amazon S3 để lưu trữ các tệp media được tải lên và các tệp sau khi chuyển đổi, AWS Lambda để thực hiện các tác vụ xử lý và chuyển đổi, API Gateway để giao tiếp giữa ứng dụng web và các dịch vụ backend, và DynamoDB để theo dõi các conversion job cùng trạng thái của chúng. AWS CDK được sử dụng để định nghĩa và triển khai cơ sở hạ tầng, cho phép quản lý kiến trúc bằng Infrastructure as Code.
+Người dùng có thể gửi yêu cầu lấy presigned URL qua API Gateway, tải tệp trực tiếp lên S3, sau đó Lambda xử lý media và lưu kết quả vào vùng S3 khác. DynamoDB quản lý trạng thái job và cung cấp phép theo dõi tiến trình. CloudFront phục vụ giao diện web tĩnh và nội dung tĩnh cho người dùng.
 
-### 2. Problem Statement
-### What’s the Problem?
-Các tệp media tồn tại dưới nhiều định dạng khác nhau và người dùng thường cần chuyển đổi chúng trước khi chia sẻ, tải lên hoặc sử dụng với các ứng dụng khác. Phương pháp chuyển đổi media truyền thống thường yêu cầu người dùng cài đặt các phần mềm chuyên dụng trên máy tính, gây bất tiện và tiêu tốn tài nguyên lưu trữ cũng như khả năng xử lý của thiết bị.
+### 2. Giới thiệu vấn đề
+#### 2.1 Vấn đề hiện tại
+Các tệp media hiện nay tồn tại dưới nhiều định dạng khác nhau và người dùng thường cần phải chuyển đổi chúng trước khi chia sẻ, tải lên hệ thống khác hoặc sử dụng trong ứng dụng. Các phương pháp chuyển đổi truyền thống thường yêu cầu cài phần mềm chuyên dụng, gây phiền phức và tiêu tốn tài nguyên máy tính.
 
-Khi số lượng và kích thước tệp tăng lên, việc quản lý quá trình chuyển đổi trên máy tính cá nhân cũng trở nên kém hiệu quả. Người dùng phải tự thực hiện việc tải lên, xử lý, sắp xếp và lưu trữ các tệp. Về phía phát triển hệ thống, việc xây dựng một ứng dụng chuyển đổi media dựa trên server truyền thống cũng yêu cầu duy trì server ngay cả khi số lượng yêu cầu chuyển đổi thấp.
+Khi số lượng và kích thước tệp tăng, quản lý chuyển đổi trên máy cá nhân trở nên không hiệu quả. Người dùng phải tự tải lên, xử lý và lưu trữ các tệp. Đối với đội phát triển, giải pháp server truyền thống cũng đồng nghĩa với việc duy trì máy chủ ngay cả khi lưu lượng thấp.
 
-### The Solution
-Nền tảng sử dụng Amazon S3 để lưu trữ các tệp media được tải lên và sau khi chuyển đổi, AWS Lambda để xử lý các tác vụ media, Amazon API Gateway để giao tiếp giữa frontend và backend, và Amazon DynamoDB để theo dõi các conversion job cùng trạng thái xử lý của chúng.
+#### 2.2 Giải pháp đề xuất
+Nền tảng này sử dụng presigned URL để khách hàng tải tệp trực tiếp tới S3 mà không cần truyền file qua backend. API Gateway xử lý yêu cầu từ giao diện web và gọi Lambda để tạo URL. Khi tệp được tải lên S3, sự kiện S3 kích hoạt Lambda xử lý media, lưu file đã chuyển đổi vào bucket khác và cập nhật trạng thái job trong DynamoDB.
 
-Hệ thống sử dụng presigned URL để cho phép người dùng tải tệp trực tiếp lên Amazon S3 thay vì truyền các tệp có kích thước lớn thông qua backend. Sau khi tệp được tải lên, một sự kiện từ S3 sẽ tự động kích hoạt processing Lambda function. Function này thực hiện quá trình chuyển đổi cần thiết và lưu tệp kết quả vào S3. DynamoDB lưu trữ thông tin của job và cho phép người dùng kiểm tra trạng thái chuyển đổi.
+Sơ đồ kiến trúc bao gồm:
+- CloudFront phục vụ giao diện web tĩnh.
+- API Gateway tiếp nhận yêu cầu từ trình duyệt.
+- Lambda tạo presigned URL upload và presigned URL download.
+- S3 lưu tệp gốc và tệp đã chuyển đổi.
+- Lambda xử lý media khi S3 upload event xảy ra.
+- DynamoDB lưu thông tin job và trạng thái xử lý.
+- Thông báo có thể được gửi khi job hoàn tất nếu cần.
 
-Nền tảng cung cấp một quy trình đơn giản tương tự các dịch vụ chuyển đổi tệp trên cloud, đồng thời tập trung vào kiến trúc serverless nhẹ và có khả năng mở rộng. Các tính năng chính bao gồm tải tệp trực tiếp lên cloud, tự động xử lý media, theo dõi trạng thái job, lưu trữ trên cloud và sử dụng cơ sở hạ tầng AWS có khả năng mở rộng.
+#### 2.3 Lợi ích và giá trị
+Giải pháp giúp người dùng không phải cài đặt phần mềm chuyển đổi trên máy cá nhân và cho phép xử lý file trực tiếp trên cloud. Hệ thống serverless giảm công việc vận hành vì AWS Lambda chỉ chạy khi có yêu cầu, còn S3 và DynamoDB là dịch vụ được quản lý.
 
-### Benefits and Return on Investment
-Giải pháp giúp giảm nhu cầu người dùng phải cài đặt và duy trì các phần mềm chuyển đổi media trên máy tính cá nhân, đồng thời cung cấp một nền tảng tập trung để quản lý các tệp media. Người dùng có thể truy cập ứng dụng thông qua giao diện web và sử dụng tài nguyên cloud để thực hiện việc xử lý và lưu trữ tệp.
+Nền tảng cung cấp giá trị:
+- Tốc độ truy cập và xử lý linh hoạt.
+- Khả năng mở rộng theo nhu cầu.
+- Giảm chi phí quản lý hạ tầng.
+- Nền tảng học tập thực tế cho team về AWS serverless và event-driven.
+- Cơ sở để mở rộng thêm định dạng media, authentication, quản lý file và triển khai tự động.
 
-Kiến trúc serverless cũng giúp giảm yêu cầu quản lý cơ sở hạ tầng vì AWS Lambda chỉ thực thi các function xử lý khi có yêu cầu. Amazon S3 cung cấp khả năng lưu trữ có thể mở rộng, trong khi DynamoDB cung cấp cơ sở dữ liệu được quản lý để lưu trữ thông tin các conversion job. Điều này cho phép hệ thống xử lý khối lượng công việc tăng lên mà không yêu cầu nhóm phát triển phải duy trì các server truyền thống.
+### 3. Kiến trúc phần mềm
+Kiến trúc đề xuất dựa trên AWS serverless và event-driven. Người dùng tương tác với giao diện web, giao tiếp qua API Gateway đến Lambda. Lambda tạo presigned URL cho phép tải file thẳng lên S3. Khi file xuất hiện trong bucket raw media, S3 gửi sự kiện đến Lambda processing. Lambda này xử lý chuyển đổi và lưu kết quả vào bucket processed media. DynamoDB lưu trạng thái job và metadata.
 
-Dự án cũng cung cấp một môi trường học tập thực tế cho nhóm phát triển. Các thành viên có cơ hội làm việc với kiến trúc AWS serverless, hệ thống event-driven, cloud storage, Infrastructure as Code, phát triển API và cơ chế tải tệp an toàn.
+Quy trình chính trong sơ đồ:
 
-Nền tảng cũng có thể được sử dụng làm cơ sở cho các phát triển trong tương lai như hỗ trợ thêm nhiều định dạng media, authentication, quản lý tệp, automated deployment và các tính năng xử lý media nâng cao.
+1. Người dùng yêu cầu presigned URL tải lên qua API Gateway.
+2. Lambda tạo presigned URL upload và trả về cho trình duyệt.
+3. Trình duyệt tải tệp lên bucket Raw Media trên S3.
+4. Sự kiện S3 kích hoạt Lambda Processing.
+5. Lambda chuyển đổi media và lưu kết quả vào bucket Processed Media.
+6. Lambda cập nhật trạng thái job trong DynamoDB (PENDING → PROCESSING → COMPLETED/FAILED).
+7. Người dùng có thể yêu cầu presigned URL download qua API Gateway để tải tệp đã chuyển đổi.
 
-### 3. Solution Architecture
-Nền tảng sử dụng kiến trúc AWS serverless để quản lý quá trình tải lên, chuyển đổi và lưu trữ media. Người dùng tương tác với ứng dụng web, ứng dụng này giao tiếp với Amazon API Gateway. Các Lambda function xử lý các API request và quá trình xử lý media, trong khi Amazon S3 lưu trữ các tệp gốc và tệp sau khi chuyển đổi. DynamoDB lưu trữ thông tin về các conversion job và trạng thái hiện tại của chúng.
+**Luồng trạng thái job**
+- PENDING: Job đã được tạo.
+- PROCESSING: File đang được xử lý.
+- COMPLETED/FAILED: Kết quả xử lý đã xong hoặc thất bại.
 
-Quy trình tổng quát:
+Kiến trúc được mô tả trong sơ đồ sau:
 
-**User → API Gateway → Lambda → Presigned S3 URL → S3 → Processing Lambda → Converted File → S3**
+![Cloud Media Converter Architecture](/fcj-workshop/images/2-Proposal/diagram.png)
 
-Trạng thái chuyển đổi được quản lý thông qua:
+#### Dịch vụ AWS được sử dụng
+- **Amazon CloudFront**: Phân phối nội dung tĩnh và giao diện web.
+- **Amazon API Gateway**: Nhận yêu cầu từ frontend và điều phối tới Lambda.
+- **AWS Lambda**: Tạo presigned URL, xử lý upload/download và chuyển đổi media.
+- **Amazon S3**: Lưu trữ file gốc và file sau khi chuyển đổi.
+- **Amazon DynamoDB**: Lưu trữ thông tin job, metadata và trạng thái xử lý.
+- **AWS IAM**: Quản lý quyền truy cập cho các dịch vụ.
+- **AWS CDK / CloudFormation**: Định nghĩa và triển khai hạ tầng AWS.
 
-**Processing Lambda → DynamoDB → API Gateway → User**
+#### Thành phần hệ thống
+- **Giao diện Web**: Cho phép người dùng chọn file, gửi yêu cầu và theo dõi trạng thái.
+- **Lớp API**: API Gateway nhận request và gọi Lambda.
+- **Tải file lên**: Lambda tạo presigned URL upload để trình duyệt gửi file thẳng vào S3.
+- **Lưu trữ dữ liệu**: S3 lưu file gốc và file đã chuyển đổi.
+- **Xử lý media**: S3 event kích hoạt Lambda processing cho file mới.
+- **Quản lý job**: DynamoDB lưu trạng thái và metadata của job.
+- **Quản lý hạ tầng**: AWS CDK định nghĩa resource và triển khai kiến trúc.
 
-Kiến trúc được mô tả chi tiết bên dưới:
+### 4. Triển khai kỹ thuật
+#### Các giai đoạn thực hiện
+Dự án được triển khai theo bốn giai đoạn:
+- **Nghiên cứu và thiết kế kiến trúc**: Tìm hiểu chuyển đổi media, dịch vụ AWS và vẽ sơ đồ kiến trúc.
+- **Đánh giá chi phí và tính khả thi**: Dùng AWS Pricing Calculator để ước tính chi phí và kiểm tra khả năng thực tế.
+- **Tối ưu kiến trúc**: Điều chỉnh để phù hợp về hiệu năng, bảo mật và chi phí.
+- **Phát triển, kiểm thử và triển khai**: Xây dựng Lambda, API, giao diện web và triển khai bằng CDK.
 
-![Cloud Media Converter Architecture](/images/2-Proposal/cloud_media_converter_architecture.jpeg)
+#### Yêu cầu kỹ thuật
+- **Nền tảng chuyển đổi media**: Web app cho phép tải lên và chuyển đổi file media, lưu trữ S3, xử lý bằng Lambda.
+- **Backend AWS**: Sử dụng S3, Lambda, API Gateway, DynamoDB, IAM và CDK.
+- **Tải file**: Presigned URL S3 để tải file trực tiếp lên bucket raw media.
+- **Theo dõi job**: DynamoDB lưu trạng thái (PENDING, PROCESSING, COMPLETED, FAILED).
+- **Hạ tầng**: AWS CDK định nghĩa resource, triển khai và tái sử dụng dễ dàng.
 
-![Cloud Media Converter Workflow](/images/2-Proposal/cloud_media_converter_workflow.jpeg)
+### 5. Lộ trình và mốc thời gian
+#### Lộ trình dự án
+- **Thực tập (Tháng 1-2)**:
+    - **Tháng 1**: Nghiên cứu yêu cầu, tìm hiểu dịch vụ AWS và thiết kế kiến trúc.
+    - **Tháng 2**: Triển khai hạ tầng, phát triển backend, quy trình xử lý media và quản lý file.
+- **Sau khi triển khai**: Theo dõi, tối ưu, sửa lỗi và mở rộng tính năng.
 
-### AWS Services Used
-- **Amazon S3**: Lưu trữ các tệp media gốc được tải lên và các tệp đầu ra sau khi chuyển đổi.
-- **AWS Lambda**: Tạo presigned URL, xử lý các tệp media được tải lên và thực hiện các tác vụ chuyển đổi.
-- **Amazon API Gateway**: Cung cấp khả năng giao tiếp giữa ứng dụng web và các Lambda function phía backend.
-- **Amazon DynamoDB**: Lưu trữ thông tin, metadata và trạng thái xử lý của các conversion job.
-- **AWS CDK**: Định nghĩa và triển khai cơ sở hạ tầng AWS bằng Infrastructure as Code.
-- **AWS IAM**: Quản lý quyền truy cập và bảo mật giữa các AWS service.
-- **AWS CloudFormation**: Quản lý cơ sở hạ tầng được tạo thông qua AWS CDK.
+### 6. Ước tính ngân sách
+Ước tính chi phí tham khảo tại [AWS Pricing Calculator](https://calculator.aws/).
 
-### Component Design
-- **Web Interface**: Cung cấp giao diện để người dùng lựa chọn, tải lên và chuyển đổi các tệp media.
-- **API Layer**: Amazon API Gateway nhận request từ web application và gọi Lambda function tương ứng.
-- **File Upload**: AWS Lambda tạo presigned URL cho phép người dùng tải tệp media trực tiếp lên Amazon S3.
-- **Data Storage**: Amazon S3 lưu trữ tệp media gốc và các tệp đã được chuyển đổi.
-- **Media Processing**: Sự kiện từ S3 kích hoạt processing Lambda khi một tệp media mới được tải lên.
-- **Job Management**: Amazon DynamoDB lưu trữ thông tin job và cho phép hệ thống theo dõi quá trình chuyển đổi.
-- **Infrastructure Management**: AWS CDK định nghĩa các cloud resource và cung cấp phương thức nhất quán để triển khai nền tảng.
+Chi phí thực tế phụ thuộc vào số file, kích thước, tần suất chuyển đổi, dung lượng lưu trữ, thời gian thực thi Lambda, số request API và thao tác DynamoDB.
 
-### 4. Technical Implementation
-**Implementation Phases**
+#### Chi phí hạ tầng
+- **AWS Lambda**: Phí theo số request và thời gian thực thi.
+- **Amazon S3**: Phí lưu trữ và request cho bucket raw/processed.
+- **Data Transfer**: Phí theo lượng dữ liệu vào/ra.
+- **Amazon API Gateway**: Phí theo số request.
+- **Amazon DynamoDB**: Phí theo số record và thao tác đọc/ghi.
+- **AWS CDK / CloudFormation**: Chi phí triển khai hạ tầng rất thấp, không phát sinh chi phí chạy liên tục.
 
-Dự án được thực hiện theo 4 giai đoạn chính:
-- **Build Theory and Draw Architecture**: Nghiên cứu về chuyển đổi media trên cloud, tìm hiểu các AWS service và thiết kế kiến trúc serverless.
-- **Calculate Price and Check Practicality**: Sử dụng AWS Pricing Calculator để ước tính chi phí vận hành và đánh giá tính khả thi của kiến trúc được đề xuất.
-- **Fix Architecture for Cost or Solution Fit**: Tối ưu kiến trúc AWS dựa trên các yêu cầu về hiệu năng, khả năng mở rộng, bảo mật và chi phí.
-- **Develop, Test, and Deploy**: Triển khai cơ sở hạ tầng AWS bằng CDK, phát triển Lambda function và web application, tích hợp các thành phần và kiểm thử hệ thống trước khi triển khai.
+Tổng chi phí sẽ được tính toán dựa trên workload dự kiến và cấu hình thực tế.
 
-**Technical Requirements**
-- **Media Converter Platform**: Một web application cho phép người dùng tải lên và chuyển đổi các tệp media, sử dụng Amazon S3 cho cloud storage và AWS Lambda cho quá trình xử lý.
-- **AWS Backend**: Yêu cầu kiến thức thực tế về Amazon S3, Lambda, API Gateway, DynamoDB, IAM và AWS CDK. S3 event được sử dụng để tự động kích hoạt các function xử lý media sau khi tệp được tải lên.
-- **File Upload System**: Presigned S3 URL được sử dụng để cho phép người dùng tải tệp trực tiếp lên S3, giúp giảm lượng dữ liệu phải truyền qua backend.
-- **Job Tracking**: DynamoDB lưu trữ thông tin và trạng thái của conversion job để người dùng có thể theo dõi tệp đang chờ xử lý, đang xử lý, đã hoàn thành hoặc thất bại.
-- **Infrastructure**: AWS CDK được sử dụng để định nghĩa và triển khai các cloud resource cần thiết, giúp kiến trúc dễ bảo trì và tái triển khai.
+### 7. Đánh giá rủi ro
+#### Ma trận rủi ro
+- **Tệp media lớn**: Ảnh hưởng cao, xác suất trung bình.
+- **Chuyển đổi thất bại**: Ảnh hưởng cao, xác suất trung bình.
+- **Tăng trưởng lưu trữ**: Ảnh hưởng trung bình, xác suất trung bình.
+- **Truy cập trái phép**: Ảnh hưởng cao, xác suất thấp.
+- **Chi phí AWS vượt dự toán**: Ảnh hưởng trung bình, xác suất thấp.
+- **Ngắt quãng dịch vụ AWS / mạng**: Ảnh hưởng trung bình, xác suất thấp.
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- **Pre-Internship (Month 0)**: 1 tháng nghiên cứu yêu cầu chuyển đổi media, tìm hiểu AWS service và thiết kế kiến trúc ban đầu.
-- **Internship (Months 1-3)**: 3 tháng.
-    - **Month 1**: Tìm hiểu AWS serverless service và triển khai cơ sở hạ tầng cloud ban đầu.
-    - **Month 2**: Phát triển backend, media-processing workflow, hệ thống lưu trữ tệp và job tracking.
-    - **Month 3**: Hoàn thiện web application, tích hợp các thành phần, kiểm thử hệ thống, tối ưu kiến trúc và triển khai ứng dụng.
-- **Post-Launch**: Tiếp tục cải thiện nền tảng, theo dõi việc sử dụng AWS, sửa lỗi và nghiên cứu thêm các tính năng chuyển đổi media.
+#### Giải pháp giảm thiểu
+- **Tệp lớn**: Dùng presigned URL upload để tránh truyền qua backend.
+- **Thất bại chuyển đổi**: Lưu trạng thái và thông tin lỗi trong DynamoDB để theo dõi và retry.
+- **Lưu trữ**: Xóa file không cần thiết và áp dụng lifecycle policy.
+- **Bảo mật**: Dùng IAM least-privilege và presigned URL cho truy cập file.
+- **Chi phí**: Thiết lập cảnh báo ngân sách và theo dõi sử dụng.
+- **Sẵn sàng**: Dùng dịch vụ AWS được quản lý và event-driven processing.
 
-### 6. Budget Estimation
-Có thể tìm thấy ước tính chi phí trên [AWS Pricing Calculator](https://calculator.aws/).
+#### Kế hoạch dự phòng
+- Giữ file gốc cho đến khi chuyển đổi thành công.
+- Lưu job thất bại trong DynamoDB để điều tra và thử lại.
+- Triển khai lại hạ tầng bằng AWS CDK nếu cần.
+- Duy trì môi trường local để kiểm thử và xử lý sự cố.
+- Khôi phục cấu hình ổn định khi xảy ra sự cố.
 
-Chi phí cuối cùng sẽ phụ thuộc vào số lượng tệp được tải lên, kích thước tệp trung bình, tần suất chuyển đổi, thời gian lưu trữ, thời gian thực thi Lambda, số lượng API request, các thao tác DynamoDB và lượng dữ liệu được truyền tải.
+### 8. Kết quả kỳ vọng
+#### Cải tiến kỹ thuật
+Nền tảng chuyển đổi media trên cloud giúp giảm nhu cầu xử lý trực tiếp trên máy tính cá nhân. Hệ thống cho phép tải file lên S3, xử lý tự động, theo dõi trạng thái job và lưu trữ kết quả trên cloud. Kiến trúc dễ mở rộng để hỗ trợ nhiều người dùng và nhiều định dạng media.
 
-### Infrastructure Costs
-- AWS Services:
-    - **AWS Lambda**: Chi phí phụ thuộc vào số lượng request và thời gian thực thi cần thiết cho quá trình chuyển đổi media.
-    - **S3 Standard**: Chi phí phụ thuộc vào lượng media gốc và media sau chuyển đổi được lưu trữ cũng như số lượng storage request.
-    - **Data Transfer**: Chi phí phụ thuộc vào lượng dữ liệu media được truyền giữa AWS và người dùng.
-    - **Amazon API Gateway**: Chi phí phụ thuộc vào số lượng API request.
-    - **Amazon DynamoDB**: Chi phí phụ thuộc vào số lượng job record và các thao tác đọc/ghi.
-    - **AWS CDK / CloudFormation**: Được sử dụng để quản lý cơ sở hạ tầng và không yêu cầu tài nguyên ứng dụng phải chạy liên tục.
-
-Total: Sẽ được tính toán bằng AWS Pricing Calculator dựa trên workload dự kiến.
-
-- **Hardware:** $0 chi phí phần cứng bổ sung một lần vì nền tảng hoạt động hoàn toàn trên AWS Cloud.
-
-### 7. Risk Assessment
-#### Risk Matrix
-- **Large Media Files**: Mức độ ảnh hưởng cao, xác suất trung bình.
-- **Media Conversion Failures**: Mức độ ảnh hưởng cao, xác suất trung bình.
-- **Storage Growth**: Mức độ ảnh hưởng trung bình, xác suất trung bình.
-- **Unauthorized File Access**: Mức độ ảnh hưởng cao, xác suất thấp.
-- **AWS Cost Overruns**: Mức độ ảnh hưởng trung bình, xác suất thấp.
-- **Network or AWS Service Outages**: Mức độ ảnh hưởng trung bình, xác suất thấp.
-
-#### Mitigation Strategies
-- **Large Files**: Sử dụng phương thức tải trực tiếp lên S3 thông qua presigned URL để tránh truyền các tệp lớn qua backend.
-- **Conversion Failures**: Lưu trạng thái chuyển đổi và thông tin lỗi trong DynamoDB để xác định và xử lý các job thất bại.
-- **Storage**: Thường xuyên xóa các tệp nguồn hoặc tệp đã chuyển đổi không còn cần thiết và cân nhắc sử dụng lifecycle policy cho việc lưu trữ lâu dài.
-- **Security**: Sử dụng IAM least-privilege policy và presigned URL để giới hạn quyền truy cập vào các tệp media được lưu trữ.
-- **Cost**: Thiết lập AWS budget alert và thường xuyên theo dõi, tối ưu việc sử dụng AWS resource.
-- **Availability**: Sử dụng các AWS managed service và event-driven processing để giảm sự phụ thuộc vào các server chạy liên tục.
-
-#### Contingency Plans
-- Giữ lại tệp media gốc cho đến khi quá trình chuyển đổi hoàn tất thành công.
-- Lưu thông tin các job thất bại trong DynamoDB để phục vụ việc kiểm tra và retry.
-- Sử dụng AWS CDK để triển khai lại cơ sở hạ tầng nếu xảy ra vấn đề nghiêm trọng về cấu hình.
-- Duy trì môi trường phát triển local để kiểm thử và xử lý sự cố.
-- Khôi phục về cấu hình infrastructure ổn định trước đó khi cần thiết.
-
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Chuyển đổi media trên cloud giúp giảm nhu cầu người dùng phải thực hiện toàn bộ quá trình chuyển đổi trực tiếp trên máy tính cá nhân.  
-Nền tảng cung cấp khả năng tải media trực tiếp lên S3, tự động xử lý, theo dõi conversion job và lưu trữ tệp trên cloud.  
-Kiến trúc có thể được mở rộng để hỗ trợ nhiều người dùng hơn, số lượng tệp lớn hơn và nhiều định dạng media khác nhau.
-
-#### Long-term Value
-1. Cung cấp nền tảng có thể tái sử dụng cho các ứng dụng xử lý media trên cloud trong tương lai.
-2. Cung cấp kinh nghiệm thực tế về kiến trúc AWS serverless và event-driven.
-3. Làm tài liệu học tập thực tế về Amazon S3, Lambda, API Gateway, DynamoDB, IAM và AWS CDK.
-4. Tạo nền tảng để bổ sung thêm nhiều định dạng media và các chức năng chuyển đổi.
-5. Có khả năng tích hợp authentication, monitoring, automated deployment và các dịch vụ xử lý media nâng cao.
-6. Cung cấp một kiến trúc có khả năng mở rộng và có thể tái sử dụng cho các dự án xử lý tệp trên cloud khác.
+#### Giá trị lâu dài
+1. Cung cấp cơ sở cho các ứng dụng xử lý media trên cloud trong tương lai.
+2. Tăng kinh nghiệm thực tế về kiến trúc AWS serverless và event-driven.
+3. Cung cấp tài liệu học tập về S3, Lambda, API Gateway, DynamoDB, IAM và CDK.
+4. Mở đường cho hỗ trợ thêm định dạng media và chức năng cao cấp.
+5. Có thể tích hợp authentication, monitoring và automated deployment.
+6. Xây dựng kiến trúc mở rộng và tái sử dụng cho các dự án xử lý file cloud khác.
