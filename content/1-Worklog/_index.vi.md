@@ -7,26 +7,18 @@ pre: " <b> 1. </b> "
 ---
 
 
-**Tuần 1:** [Tìm hiểu chương trình FCAJ và làm quen với một số dịch vụ AWS.](1.1-week1/)
+**Tuần 1:** [Tìm hiểu về chương trình FCAJ và làm quen với các dịch vụ AWS](1.1-week1/)
 
-**Tuần 2:** [Làm quen với AWS CloudFormation, xây dựng hạ tầng dưới dạng mã (IaC), tìm hiểu và làm quen máy chủ EC2 và một số dịch vụ liên quan.](1.2-week2/)
+**Tuần 2:** [Tìm hiểu các dịch vụ AWS có thể hữu ích cho dự án](1.2-week2/)
 
-**Tuần 3:** [Làm công việc B...](1.3-week3/)
+**Tuần 3:** [Tiếp tục nghiên cứu và tìm hiểu](1.3-week3/)
 
-**Tuần 4:** [Làm công việc C...](1.4-week4/)
+**Tuần 4:** [Hoàn thiện kiến trúc của workshop và phân công nhiệm vụ](1.4-week4/)
 
-**Tuần 5:** [Làm công việc D...](1.5-week5/)
+**Tuần 5:** [Thiết kế và phát triển Frontend cho ứng dụng](1.5-week5/)
 
-**Tuần 6:** [Làm công việc E...](1.6-week6/)
+**Tuần 6:** [Kết nối Frontend của ứng dụng web với các dịch vụ AWS thông qua Backend](1.6-week6/)
 
-**Tuần 7:** [Làm công việc G...](1.7-week7/)
+**Tuần 7:** [Bắt đầu viết tài liệu cho workshop của dự án](1.7-week7/)
 
-**Tuần 8:** [Làm công việc H...](1.8-week8/)
-
-**Tuần 9:** [Làm công việc I...](1.9-week9/)
-
-**Tuần 10:** [Làm công việc L...](1.10-week10/)
-
-**Tuần 11:** [Làm công việc M...](1.11-week11/)
-
-**Tuần 12:** [Làm công việc N...](1.12-week12/)
+**Tuần 8:** [Hoàn thiện báo cáo workshop](1.8-week8/)
