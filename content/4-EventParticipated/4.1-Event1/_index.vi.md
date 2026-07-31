@@ -141,6 +141,6 @@ Tham gia **AWS Cloud Architecture Challenge** là một trải nghiệm thú v�
 
 #### Một số hình ảnh sự kiện
 
-![Event picture](/fcj-workshop/images/2.jpg)
+![Event picture](/fcj-workshop/images/1.JPG)
 
 > Nhìn chung, AWS Cloud Architecture Challenge đã mang đến một cơ hội thú vị để kiểm tra và áp dụng kiến thức AWS trong một môi trường cạnh tranh. Hình thức thi quiz gồm 10 câu hỏi với số điểm tăng dần giúp em củng cố kiến thức về AWS Cloud Architecture, cải thiện khả năng đưa ra quyết định kỹ thuật nhanh chóng, đồng thời nhận thấy tầm quan trọng của teamwork và communication trong quá trình giải quyết các vấn đề liên quan đến cloud.

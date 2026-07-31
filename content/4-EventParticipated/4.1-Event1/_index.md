@@ -141,6 +141,6 @@ Participating in the **AWS Cloud Architecture Challenge** was an exciting and va
 
 #### Some event photos
 
-![Event picture](/fcj-workshop/images/1.jpg)
+![Event picture](/fcj-workshop/images/1.JPG)
 
 > Overall, the AWS Cloud Architecture Challenge provided an engaging opportunity to test and apply AWS knowledge in a competitive environment. The 10-question point-based format helped strengthen my understanding of AWS cloud architecture, encouraged faster technical decision-making, and demonstrated the importance of teamwork and communication when solving cloud-related problems.
