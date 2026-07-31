@@ -28,12 +28,12 @@ To prepare the workshop environment, deploy the following CloudFormation templat
 
 The CloudFormation deployment process takes approximately 15 minutes to complete.
 
-![complete](/fck-workshop/images/5-Workshop/5.2-Prerequisite/complete.png)
+![complete](/fcj-workshop/images/5-Workshop/5.2-Prerequisite/complete.png)
 
 + 2 VPCs have been created
 
-![vpcs](/fck-workshop/images/5-Workshop/5.2-Prerequisite/vpcs.png)
+![vpcs](/fcj-workshop/images/5-Workshop/5.2-Prerequisite/vpcs.png)
 
 + 3 EC2s have been created
 
-![EC2](/fck-workshop/images/5-Workshop/5.2-Prerequisite/ec2.png)
+![EC2](/fcj-workshop/images/5-Workshop/5.2-Prerequisite/ec2.png)
