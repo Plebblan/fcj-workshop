@@ -10,9 +10,9 @@ Các tài liệu tham khảo sau được sử dụng trong quá trình nghiên 
 
 ## 1. Repository của dự án
 
-- **FCAJ Workshop – Intern Report**  
-  Repository GitHub chứa source code, tài liệu workshop, cấu hình và các tài nguyên được sử dụng trong dự án.  
-  [https://github.com/Plebblan/fcj-workshop](https://github.com/Plebblan/fcj-workshop)
+- **Cloud Media Converter on AWS**  
+  Repository GitHub chứa source code, infrastructure code, frontend, backend và tài liệu liên quan đến dự án Cloud Media Converter on AWS.  
+  [https://github.com/danghuyenvu/Cloud-Media-Converter-and-Storage-on-AWS](https://github.com/danghuyenvu/Cloud-Media-Converter-and-Storage-on-AWS)
 
 ## 2. Tài liệu Amazon Web Services
 
@@ -106,6 +106,6 @@ Các tài liệu tham khảo sau được sử dụng trong quá trình nghiên 
 
 &emsp;Các tài liệu trên cung cấp nền tảng kiến thức kỹ thuật cho quá trình nghiên cứu, thiết kế và triển khai workshop. Tài liệu chính thức của AWS được sử dụng chủ yếu để tìm hiểu về các AWS service, kiến trúc serverless, phương pháp cấu hình, bảo mật và các phương thức tích hợp giữa các service.
 
-&emsp;Repository GitHub của dự án chứa source code, tài liệu workshop và các thành phần triển khai được xây dựng trong quá trình thực hiện dự án.
+&emsp;Repository GitHub của dự án chứa source code, infrastructure code, frontend, backend và các tài liệu liên quan được xây dựng trong quá trình thực hiện dự án.
 
 &emsp;Các tài liệu tham khảo được sử dụng nhằm hỗ trợ quá trình học tập và phát triển. Kiến trúc, implementation, configuration, testing procedure và documentation cuối cùng được điều chỉnh dựa trên yêu cầu và mục tiêu cụ thể của workshop.
